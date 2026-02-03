@@ -1,0 +1,735 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   FONTS - Proxima Nova & All Round Gothic
+   Local files from /assets/fonts/
+   ============================================ */
+
+/* --- Proxima Nova (body / sans) --- */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../assets/fonts/ProximaNova-Light.woff2') format('woff2'),
+       url('../assets/fonts/ProximaNova-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../assets/fonts/ProximaNova-Regular.woff2') format('woff2'),
+       url('../assets/fonts/ProximaNova-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../assets/fonts/ProximaNova-Semibold.woff2') format('woff2'),
+       url('../assets/fonts/ProximaNova-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../assets/fonts/ProximaNova-Bold.woff2') format('woff2'),
+       url('../assets/fonts/ProximaNova-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- All Round Gothic (headings) --- */
+@font-face {
+  font-family: 'All Round Gothic';
+  src: url('../assets/fonts/AllRoundGothic-Book.woff2') format('woff2'),
+       url('../assets/fonts/AllRoundGothic-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'All Round Gothic';
+  src: url('../assets/fonts/AllRoundGothic-Medium.woff2') format('woff2'),
+       url('../assets/fonts/AllRoundGothic-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'All Round Gothic';
+  src: url('../assets/fonts/AllRoundGothic-Demi.woff2') format('woff2'),
+       url('../assets/fonts/AllRoundGothic-Demi.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'All Round Gothic';
+  src: url('../assets/fonts/AllRoundGothic-Bold.woff2') format('woff2'),
+       url('../assets/fonts/AllRoundGothic-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-dark-900 text-white font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+/* ============================================
+   COMPONENTS - Reusable patterns
+   ============================================ */
+
+@layer components {
+  /* ============================================
+     NAVIGATION COMPONENTS
+     ============================================ */
+
+  /* Nav link - default */
+  .nav-link {
+    @apply text-body text-white transition-colors duration-200;
+  }
+
+  .nav-link:hover {
+    @apply text-yellow-500;
+  }
+
+  /* Nav link - active */
+  .nav-link-active {
+    @apply text-body text-yellow-500;
+  }
+
+  /* Nav dropdown trigger */
+  .nav-dropdown {
+    @apply flex items-center gap-2 text-body text-white transition-colors duration-200 cursor-pointer;
+  }
+
+  .nav-dropdown:hover {
+    @apply text-yellow-500;
+  }
+
+  /* CTA Button in header */
+  .btn-cta {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white font-heading font-bold text-body-lg rounded-full transition-all duration-200;
+  }
+
+  .btn-cta:hover {
+    @apply opacity-90 scale-105;
+  }
+
+  /* Mobile menu button */
+  .mobile-menu-btn {
+    @apply flex flex-col justify-center items-center w-6 h-6 gap-1.5 cursor-pointer;
+  }
+
+  .mobile-menu-btn span {
+    @apply block w-5 h-0.5 bg-white transition-all duration-200;
+  }
+
+  /* Sidebar social link */
+  .sidebar-social-link {
+    @apply text-label uppercase tracking-wider text-slate-400 transition-colors duration-200 whitespace-nowrap;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+
+  .sidebar-social-link:hover {
+    @apply text-white;
+  }
+
+  /* ============================================
+     BUTTONS
+     ============================================ */
+
+  /* Gradient border button */
+  .btn-gradient-border {
+    @apply relative inline-flex items-center justify-center px-6 py-3 font-semibold text-white rounded-full;
+    background: linear-gradient(#1A1A1A, #1A1A1A) padding-box,
+      linear-gradient(135deg, #FDD80A 0%, #F02F8D 50%, #B700FF 100%) border-box;
+    border: 2px solid transparent;
+  }
+
+  .btn-gradient-border:hover {
+    background: linear-gradient(#2D2D2D, #2D2D2D) padding-box,
+      linear-gradient(135deg, #FDD80A 0%, #F02F8D 50%, #B700FF 100%) border-box;
+  }
+
+  /* Solid gradient button */
+  .btn-gradient-solid {
+    @apply inline-flex items-center justify-center px-6 py-3 font-semibold text-dark-900 rounded-full bg-gradient-main;
+    transition: all 0.3s ease;
+  }
+
+  .btn-gradient-solid:hover {
+    @apply opacity-90 scale-105;
+  }
+
+  /* Outline button - yellow */
+  .btn-outline-yellow {
+    @apply inline-flex items-center gap-2 px-6 py-3 text-white font-heading font-bold text-body-lg rounded-full border-2 border-yellow-500 bg-transparent transition-all duration-200;
+  }
+
+  .btn-outline-yellow:hover {
+    @apply bg-yellow-500/10;
+  }
+
+  /* Gradient button with glow */
+  .btn-gradient-glow {
+    @apply inline-flex items-center gap-2 px-6 py-3 text-white font-heading font-bold text-body-lg rounded-full transition-all duration-200;
+    background: linear-gradient(270deg, #F02F8D 0%, #A855F7 42%, #9333EA 100%);
+    border: 2px solid #F02F8D;
+  }
+
+  .btn-gradient-glow:hover {
+    @apply opacity-90 scale-105;
+  }
+
+  /* ============================================
+     HERO SECTION
+     ============================================ */
+
+  .hero-section {
+    @apply relative overflow-hidden;
+    padding-top: 69px; /* header height offset */
+  }
+
+  /* Video container - only visible on lg+ (laptop), right side */
+  .hero-video-container {
+    @apply absolute top-0 right-0 w-1/2 h-full z-0 hidden lg:block;
+  }
+
+  .hero-video {
+    @apply absolute inset-0 w-full h-full object-cover;
+  }
+
+  /* Overlay - blends video into dark background from left */
+  .hero-video-overlay {
+    @apply absolute inset-0 z-10;
+    background: linear-gradient(90deg,
+        rgba(13, 13, 13, 1) 0%,
+        rgba(13, 13, 13, 0.85) 20%,
+        rgba(13, 13, 13, 0.3) 60%,
+        rgba(13, 13, 13, 0.1) 100%);
+  }
+
+  .hero-content {
+    @apply relative z-30 flex items-center;
+  }
+
+
+
+  .hero-glow-pink {
+    @apply absolute w-[900px] h-[580px] bg-purple-500/20 rounded-full blur-[150px] pointer-events-none;
+    transform: rotate(-15deg);
+  }
+
+  .hero-glow-dark {
+    @apply absolute w-[900px] h-[580px] bg-dark-900/40 rounded-full blur-[150px] pointer-events-none;
+    transform: rotate(-15deg);
+  }
+
+  .hero-title {
+    @apply text-yellow-500 font-heading font-bold leading-tight;
+    font-size: clamp(2.5rem, 5vw, 4.375rem);
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    @apply text-white text-body-lg leading-relaxed max-w-md;
+  }
+
+  /* Stats/features with checkmark */
+  .hero-stat {
+    @apply flex items-center gap-1.5 text-slate-300 text-body;
+  }
+
+  .hero-stat-icon {
+    @apply w-6 h-6 flex items-center justify-center relative;
+  }
+
+  .hero-stat-icon::before {
+    content: '';
+    @apply absolute w-[18px] h-[18px] bg-purple-500/20 rounded-sm;
+  }
+
+  .hero-stat-icon::after {
+    content: '';
+    @apply absolute w-3 h-2 border-l-2 border-b-2 border-purple-500 transform -rotate-45 translate-y-[-1px];
+  }
+
+  /* ============================================
+     CARDS
+     ============================================ */
+
+  /* Gradient border card/box */
+  .card-gradient-border {
+    @apply relative rounded-2xl;
+    background: linear-gradient(#1A1A1A, #1A1A1A) padding-box,
+      linear-gradient(135deg, #FDD80A 0%, #F02F8D 50%, #B700FF 100%) border-box;
+    border: 2px solid transparent;
+  }
+
+  /* ============================================
+     TEXT UTILITIES
+     ============================================ */
+
+  /* Gradient text - main diagonal */
+  .text-gradient {
+    @apply bg-gradient-main bg-clip-text text-transparent;
+  }
+
+  /* Gradient text - hero style (yellow -> pink -> fuchsia) */
+  .text-gradient-hero {
+    @apply bg-gradient-text bg-clip-text text-transparent;
+  }
+
+  /* Gradient button - global CTA
+     Figma: bg-linear-270 from-pink-500 via-fuchsia-500 via-42% to-fuchsia-600
+     Border: outline-2 outline-pink-400 outline-offset-[-2px] */
+  .btn {
+    @apply inline-flex items-center gap-2 px-6 py-3 text-white font-heading font-bold text-body-lg rounded-full transition-all duration-200;
+    background: linear-gradient(270deg, #EC4899 0%, #D946EF 42%, #C026D3 100%);
+    outline: 2px solid #F472B6;
+    outline-offset: -2px;
+  }
+
+  .btn:hover {
+    @apply opacity-90 scale-105;
+  }
+
+  /* Gradient border button - outline with gradient border */
+  .btn-gradient-border-hero {
+    @apply relative inline-flex items-center justify-center px-6 py-3 font-heading font-bold text-white text-body-lg rounded-full;
+    background: transparent;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#0D0D0D, #0D0D0D), linear-gradient(50deg, #FACC15, #EC4899);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  .btn-gradient-border-hero:hover {
+    background-image: linear-gradient(#1A1A1A, #1A1A1A), linear-gradient(50deg, #FACC15, #EC4899);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  /* ============================================
+     SECTION HEADINGS - reusable pattern
+     ============================================ */
+
+  /* Subtitle with yellow line + uppercase label
+     Figma: line 67.82px yellow-500, text Proxima Nova 16px uppercase tracking 1.28px */
+  .section-subtitle {
+    @apply flex items-center gap-6;
+  }
+
+  .section-subtitle::before {
+    content: '';
+    @apply block w-[68px] h-px bg-yellow-500;
+  }
+
+  .section-subtitle span {
+    @apply text-yellow-500 font-sans uppercase;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1.28px;
+  }
+
+  /* Section heading
+     Figma: All Round Gothic 40px/52px bold */
+  .section-heading {
+    @apply font-heading font-bold text-white;
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  /* Section description row with line + link */
+  .section-desc-row {
+    @apply flex flex-wrap items-center justify-between gap-4;
+  }
+
+  .section-desc-row p {
+    @apply font-sans;
+    color: #C7CEE5;
+    font-size: 18px;
+    line-height: 28.8px;
+  }
+
+  .section-desc-row .divider-line {
+    @apply hidden lg:block flex-1 h-px bg-purple-500;
+  }
+
+  /* Section link with underline only under link text + triangle arrow
+     Figma: purple-500 text, underline under text, triangle SVG after */
+  .section-link {
+    @apply inline-flex items-center gap-3 font-sans uppercase transition-colors duration-200;
+    color: #F02F8D;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .section-link span {
+    @apply border-b border-current pb-1;
+  }
+
+  .section-link:hover {
+    color: #FDD80A;
+  }
+
+  .section-link svg {
+    @apply flex-shrink-0;
+  }
+
+  /* ============================================
+     CASE STUDY CARDS
+     ============================================ */
+
+  /* Case card with gradient border
+     Figma: 246deg yellow-400 -> fuchsia-600 68% -> pink-500, 4px border */
+  .case-card {
+    @apply relative w-full overflow-hidden;
+    height: clamp(420px, 50vw, 600px);
+    border: 4px solid transparent;
+    background-image:
+      linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%),
+      linear-gradient(246deg, #FACC15 0%, #C026D3 68%, #EC4899 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  /* Background image - blurred
+     Figma: blur(11.55px), scaled larger to avoid white edges */
+  .case-card-bg {
+    @apply absolute inset-0 w-full h-full object-cover scale-110;
+    filter: blur(11.55px);
+  }
+
+  /* Dark overlay on top of blurred bg */
+  .case-card-overlay {
+    @apply absolute inset-0;
+    background:
+      linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%),
+      rgba(0,0,0,0.05);
+  }
+
+  /* Content centered */
+  .case-card-content {
+    @apply relative z-10 flex flex-col items-center justify-center h-full px-6;
+    gap: 16px;
+  }
+
+  .case-card-logo {
+    @apply w-auto object-contain;
+    max-height: 20px;
+  }
+
+  /* Card title
+     Figma: All Round Gothic 46px/50.6px semibold capitalize */
+  .case-card-title {
+    @apply text-white font-heading font-semibold text-center capitalize;
+    font-size: 46px;
+    line-height: 50.6px;
+  }
+
+  /* ============================================
+     BENEFIT LIST - reusable (checkmark + title + desc)
+     ============================================ */
+
+  .benefit-item {
+    @apply flex items-start gap-6;
+  }
+
+  /* Check circle icon (CSS-only) */
+  .benefit-check {
+    @apply w-6 h-6 flex-shrink-0 relative mt-0.5;
+  }
+
+  .benefit-check svg {
+    @apply w-6 h-6;
+  }
+
+  .benefit-title {
+    @apply text-white font-heading font-semibold capitalize;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .benefit-desc {
+    @apply font-sans;
+    color: #C7CEE5;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  /* ============================================
+     STAT CHAT BUBBLES (floating stats on images)
+     ============================================ */
+
+  .stat-bubble {
+    @apply absolute bg-dark-700 rounded-lg border border-yellow-500 px-5 py-3 text-right;
+  }
+
+  .stat-bubble-value {
+    @apply text-white font-heading font-bold capitalize leading-10;
+    font-size: 36px;
+  }
+
+  .stat-bubble-label {
+    @apply text-white font-heading leading-6;
+    font-size: 20px;
+  }
+
+  /* Triangle/arrow indicator on bubble */
+  .stat-bubble-arrow {
+    @apply absolute w-10 h-7;
+  }
+
+  /* ============================================
+     TESTIMONIAL CARDS
+     ============================================ */
+
+  .testimonial-card {
+    @apply relative px-6 pt-8 pb-12 overflow-hidden flex flex-col gap-5;
+    background: #27272A;
+    border: 3px solid transparent;
+    background-image:
+      linear-gradient(#27272A, #27272A),
+      linear-gradient(246deg, #FACC15 0%, #C026D3 68%, #EC4899 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  .testimonial-card-header {
+    @apply flex items-center gap-4;
+  }
+
+  .testimonial-card-avatar {
+    @apply w-16 h-16 rounded-full bg-white flex-shrink-0 overflow-hidden;
+  }
+
+  .testimonial-card-avatar img {
+    @apply w-full h-full object-cover;
+  }
+
+  .testimonial-card-name {
+    @apply text-white font-heading font-semibold capitalize leading-6;
+    font-size: 20px;
+  }
+
+  .testimonial-card-role {
+    @apply text-light-gray font-sans leading-7;
+    font-size: 16px;
+  }
+
+  .testimonial-card-text {
+    @apply text-light-gray font-sans leading-6;
+    font-size: 16px;
+  }
+
+  /* Quote icon - flush to bottom-right corner, touching edges */
+  .testimonial-quote-icon {
+    @apply absolute pointer-events-none;
+    right: 0;
+    bottom: 0;
+  }
+
+  /* Logo strip - full color, small logos, many in a row */
+  .logo-strip {
+    @apply w-full flex items-center justify-between;
+  }
+
+  .logo-strip img {
+    @apply h-8 w-auto object-contain;
+  }
+
+  /* ============================================
+     CONTACT FORM
+     ============================================ */
+
+  .contact-input {
+    @apply w-full bg-transparent border-b border-white text-white font-sans text-lg leading-8 pb-3 pt-2 outline-none placeholder-white/60 transition-colors duration-200;
+  }
+
+  .contact-input:focus {
+    border-bottom-color: #FACC15;
+  }
+
+  .contact-textarea {
+    @apply w-full bg-transparent border-b border-white text-white font-sans text-lg leading-8 pb-3 pt-2 outline-none placeholder-white/60 resize-none transition-colors duration-200;
+    min-height: 80px;
+  }
+
+  .contact-textarea:focus {
+    border-bottom-color: #FACC15;
+  }
+
+  .contact-checkbox {
+    @apply flex items-start gap-3;
+  }
+
+  .contact-checkbox input[type="checkbox"] {
+    @apply w-5 h-5 mt-1 flex-shrink-0 accent-pink-500;
+  }
+
+  .contact-checkbox label {
+    @apply text-white/70 font-sans text-sm leading-5;
+  }
+
+  /* ============================================
+     FOOTER
+     ============================================ */
+
+  .footer {
+    @apply relative overflow-hidden;
+    min-height: 100vh;
+    background: #121318;
+  }
+
+  .footer-container {
+    @apply section-container py-16 relative z-10 min-h-screen flex flex-col justify-center;
+  }
+
+  .footer-col-title {
+    @apply text-white font-heading font-bold capitalize leading-10;
+    font-size: 36px;
+  }
+
+  .footer-col-text {
+    @apply text-white font-sans text-lg leading-7;
+  }
+
+  .footer-col-link {
+    @apply text-white font-sans text-lg leading-7 underline transition-colors duration-200;
+  }
+
+  .footer-col-link:hover {
+    color: #FACC15;
+  }
+
+  /* Rotated background watermark — scales to fit viewport height with margin */
+  .footer-watermark {
+    @apply absolute opacity-[0.04] font-black text-white pointer-events-none select-none whitespace-nowrap;
+    font-family: 'All Round Gothic', sans-serif;
+    line-height: 1;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    /* Scale to fill height minus margins */
+    top: 32px;
+    bottom: 32px;
+    right: 24px;
+    font-size: 1px; /* overridden by JS */
+  }
+
+  /* Mobile: closer to end */
+  @media (max-width: 1023px) {
+    .footer-watermark {
+      right: 12px;
+      top: auto;
+      bottom: 32px;
+      height: 60vh;
+    }
+  }
+
+  /* ============================================
+     DECORATIVE ELEMENTS
+     ============================================ */
+
+  /* Gradient decorative square/element */
+  .gradient-square {
+    @apply w-4 h-4 rounded-sm bg-gradient-main;
+  }
+
+  /* ============================================
+     LAYOUT
+     ============================================ */
+
+  /* Section container */
+  .section-container {
+    @apply max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-24;
+  }
+}
+
+/* ============================================
+   UTILITIES - Additional helpers
+   ============================================ */
+
+@layer utilities {
+
+  /* Gradient border utility (alternative approach) */
+  .border-gradient {
+    border-image: linear-gradient(135deg, #FDD80A 0%, #F02F8D 50%, #B700FF 100%) 1;
+  }
+}
+
+/* ============================================
+   CARD-STACK SCROLL EFFECT
+   Each section sticks to the top while the next
+   one slides over it like a deck of cards.
+   ============================================ */
+
+.card-stack-section {
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  will-change: transform;
+}
+
+/* Each section needs a z-index so later sections stack on top */
+.card-stack-section:nth-child(1) { z-index: 1; }
+.card-stack-section:nth-child(2) { z-index: 2; }
+.card-stack-section:nth-child(3) { z-index: 3; }
+.card-stack-section:nth-child(4) { z-index: 4; }
+.card-stack-section:nth-child(5) { z-index: 5; }
+.card-stack-section:nth-child(6) { z-index: 6; }
+.card-stack-section:nth-child(7) { z-index: 7; }
+.card-stack-section:nth-child(8) { z-index: 8; }
+
+/* Subtle shadow on top edge for depth effect */
+.card-stack-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, transparent 100%);
+  z-index: 50;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* First section shouldn't have top shadow */
+.card-stack-section:first-child::before {
+  display: none;
+}

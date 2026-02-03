@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page - Dev Version</title>
+  
+  <!-- Compiled Tailwind CSS -->
+  <link rel="stylesheet" href="dist/output.css">
+  
+  <!-- Fonts fallback (Inter as placeholder for Proxima Nova) -->
+  <style>
+    /* Temporary: Using Inter until proper fonts are added */
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 800; }
+  </style>
+</head>
+<body class="bg-dark-900 text-white min-h-screen">
+
+  <!-- ============================================
+       COMPONENT SHOWCASE - Design System Preview
+       ============================================ -->
+  
+  <div class="section-container py-16">
+    
+    <!-- Header -->
+    <header class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl mb-4">Design System Preview</h1>
+      <p class="text-gray-400 text-lg">Komponenty gotowe do użycia w projekcie</p>
+    </header>
+
+    <!-- ============================================
+         COLORS
+         ============================================ -->
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 flex items-center gap-3">
+        <span class="gradient-square"></span>
+        Kolory
+      </h2>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="text-center">
+          <div class="w-full h-24 rounded-xl bg-yellow-500 mb-2"></div>
+          <p class="font-semibold">Yellow 500</p>
+          <p class="text-gray-400 text-sm">#FDD80A</p>
+        </div>
+        <div class="text-center">
+          <div class="w-full h-24 rounded-xl bg-purple-500 mb-2"></div>
+          <p class="font-semibold">Purple 500</p>
+          <p class="text-gray-400 text-sm">#F02F8D</p>
+        </div>
+        <div class="text-center">
+          <div class="w-full h-24 rounded-xl bg-violet-500 mb-2"></div>
+          <p class="font-semibold">Violet 500</p>
+          <p class="text-gray-400 text-sm">#B700FF</p>
+        </div>
+        <div class="text-center">
+          <div class="w-full h-24 rounded-xl bg-gradient-main mb-2"></div>
+          <p class="font-semibold">Main Gradient</p>
+          <p class="text-gray-400 text-sm">Yellow → Purple → Violet</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         BUTTONS
+         ============================================ -->
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 flex items-center gap-3">
+        <span class="gradient-square"></span>
+        Przyciski
+      </h2>
+      
+      <div class="flex flex-wrap gap-4 items-center">
+        <!-- Gradient border button -->
+        <button class="btn-gradient-border">
+          Gradient Border
+        </button>
+        
+        <!-- Solid gradient button -->
+        <button class="btn-gradient-solid">
+          Solid Gradient
+        </button>
+        
+        <!-- Yellow button -->
+        <button class="px-6 py-3 bg-yellow-500 text-dark-900 font-semibold rounded-full hover:opacity-90 transition">
+          Yellow Button
+        </button>
+        
+        <!-- Purple button -->
+        <button class="px-6 py-3 bg-purple-500 text-white font-semibold rounded-full hover:opacity-90 transition">
+          Purple Button
+        </button>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CARDS
+         ============================================ -->
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 flex items-center gap-3">
+        <span class="gradient-square"></span>
+        Karty
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Card with gradient border -->
+        <div class="card-gradient-border p-6">
+          <h3 class="text-xl mb-3">Karta z gradient border</h3>
+          <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+        </div>
+        
+        <!-- Simple dark card -->
+        <div class="bg-dark-800 rounded-2xl p-6 border border-dark-700">
+          <h3 class="text-xl mb-3">Prosta ciemna karta</h3>
+          <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+        </div>
+        
+        <!-- Card with gradient accent -->
+        <div class="bg-dark-800 rounded-2xl p-6 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-main-horizontal"></div>
+          <h3 class="text-xl mb-3">Karta z gradient accent</h3>
+          <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         TYPOGRAPHY
+         ============================================ -->
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 flex items-center gap-3">
+        <span class="gradient-square"></span>
+        Typografia
+      </h2>
+      
+      <div class="space-y-4">
+        <h1 class="text-5xl">Heading 1 - All Round Gothic</h1>
+        <h2 class="text-4xl">Heading 2 - All Round Gothic</h2>
+        <h3 class="text-3xl">Heading 3 - All Round Gothic</h3>
+        <h4 class="text-2xl">Heading 4 - All Round Gothic</h4>
+        <p class="text-lg">Paragraf - Proxima Nova (obecnie Inter jako fallback)</p>
+        <p class="text-base text-gray-400">Mniejszy tekst w szarym kolorze dla opisów i detali.</p>
+        <p class="text-gradient text-2xl font-bold">Tekst z gradientem</p>
+      </div>
+    </section>
+
+    <!-- ============================================
+         DECORATIVE ELEMENTS
+         ============================================ -->
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 flex items-center gap-3">
+        <span class="gradient-square"></span>
+        Elementy dekoracyjne
+      </h2>
+      
+      <div class="flex flex-wrap gap-6 items-center">
+        <!-- Gradient squares -->
+        <div class="flex gap-2">
+          <div class="w-3 h-3 rounded-sm bg-gradient-main"></div>
+          <div class="w-4 h-4 rounded-sm bg-gradient-main"></div>
+          <div class="w-5 h-5 rounded-sm bg-gradient-main"></div>
+          <div class="w-6 h-6 rounded-sm bg-gradient-main"></div>
+        </div>
+        
+        <!-- Gradient line -->
+        <div class="w-32 h-1 bg-gradient-main-horizontal rounded-full"></div>
+        
+        <!-- Gradient circle -->
+        <div class="w-12 h-12 rounded-full bg-gradient-main"></div>
+        
+        <!-- Gradient ring -->
+        <div class="w-12 h-12 rounded-full bg-gradient-main p-0.5">
+          <div class="w-full h-full rounded-full bg-dark-900"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         EXAMPLE HERO SECTION
+         ============================================ -->
+    <section class="mb-16">
+      <h2 class="text-2xl mb-6 flex items-center gap-3">
+        <span class="gradient-square"></span>
+        Przykładowa sekcja Hero
+      </h2>
+      
+      <div class="card-gradient-border p-8 md:p-12 text-center">
+        <h1 class="text-4xl md:text-6xl mb-6">
+          Tutaj <span class="text-gradient">Twój nagłówek</span>
+        </h1>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <button class="btn-gradient-solid">
+            Główna akcja
+          </button>
+          <button class="btn-gradient-border">
+            Druga akcja
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer info -->
+  <footer class="border-t border-dark-700 py-8">
+    <div class="section-container text-center text-gray-500">
+      <p>Dev Version • Tailwind CSS • Gotowe do przeniesienia na WordPress</p>
+    </div>
+  </footer>
+
+</body>
+</html>
