@@ -17,14 +17,17 @@ figma-project/
 ## Szybki start
 
 1. **Zainstaluj zależności:**
+
    ```bash
    npm install
    ```
 
 2. **Uruchom tryb watch (development):**
+
    ```bash
    npm run dev
    ```
+
    Tailwind będzie automatycznie kompilował CSS przy każdej zmianie.
 
 3. **Zbuduj produkcyjną wersję:**
@@ -34,14 +37,14 @@ figma-project/
 
 ## Zdefiniowane kolory
 
-| Nazwa | Klasa Tailwind | HEX |
-|-------|----------------|-----|
+| Nazwa      | Klasa Tailwind                     | HEX     |
+| ---------- | ---------------------------------- | ------- |
 | Yellow 500 | `bg-yellow-500`, `text-yellow-500` | #FDD80A |
 | Purple 500 | `bg-purple-500`, `text-purple-500` | #F02F8D |
 | Violet 500 | `bg-violet-500`, `text-violet-500` | #B700FF |
-| Dark 900 | `bg-dark-900` | #0D0D0D |
-| Dark 800 | `bg-dark-800` | #1A1A1A |
-| Dark 700 | `bg-dark-700` | #2D2D2D |
+| Dark 900   | `bg-dark-900`                      | #0D0D0D |
+| Dark 800   | `bg-dark-800`                      | #1A1A1A |
+| Dark 700   | `bg-dark-700`                      | #2D2D2D |
 
 ## Gradienty
 
@@ -77,23 +80,6 @@ figma-project/
 ## Fonty
 
 Projekt jest skonfigurowany na:
+
 - **Proxima Nova** - tekst podstawowy (font-sans)
 - **All Round Gothic** - nagłówki (font-heading)
-
-⚠️ Oba fonty są płatne. W wersji dev używamy **Inter** jako fallback.
-
-Gdy masz pliki fontów, wrzuć je do `/assets/fonts/` i odkomentuj @font-face w `src/input.css`.
-
-## Przeniesienie do WordPress
-
-1. Skopiuj `tailwind.config.js` i `src/input.css` do katalogu motywu
-2. W `functions.php` załaduj `dist/output.css`:
-   ```php
-   wp_enqueue_style('theme-tailwind', get_template_directory_uri() . '/dist/output.css');
-   ```
-3. Uruchom `npm run dev` podczas developmentu
-4. Przed wrzuceniem na serwer: `npm run build`
-
----
-
-**Gotowe!** Wrzucaj screeny z Figmy, a zbuduję kolejne sekcje.
