@@ -168,76 +168,57 @@
                         </p>
 
                         <!-- ============================================
-                           ABOUT US BLOCK - Stats with circles
+                           STATS BLOCK - Centered circles with descriptions
                            ============================================ -->
                         <div class="my-16 lg:my-24">
                             <!-- Header -->
-                            <div class="mb-12">
-                                <div class="flex items-center gap-4 mb-4">
+                            <div class="text-center mb-16">
+                                <div class="flex items-center justify-center gap-4 mb-6">
                                     <div class="w-14 h-px bg-slate-400"></div>
-                                    <span class="text-white/50 font-sans text-base uppercase tracking-wider">O projekcie</span>
+                                    <span class="text-white/50 font-sans text-base uppercase tracking-wider">Wyniki projektu</span>
+                                    <div class="w-14 h-px bg-slate-400"></div>
                                 </div>
-                                <h2 class="text-white text-3xl lg:text-4xl font-heading font-bold leading-tight mb-4">
-                                    Kreatywny i silny zespół
+                                <h2 class="text-white text-3xl lg:text-4xl font-heading font-bold leading-tight">
+                                    Liczby mówią same za siebie
                                 </h2>
-                                <div class="w-3 h-3 bg-pink-500 rounded-full mb-6"></div>
-                                <p class="text-white/50 font-sans text-base leading-6 max-w-xl">
-                                    Nasza kreatywna i profesjonalna agencja rozwija produkty od 15 lat. Jesteśmy wyjątkowi.
-                                </p>
                             </div>
 
-                            <!-- Stats Grid -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-                                <!-- Left column - text -->
-                                <div class="flex flex-col gap-8">
-                                    <p class="text-white/50 font-sans text-lg leading-7">
-                                        Zdobyliśmy wiele nagród za naszą pracę i rozwijamy aplikacje, które stały się popularne na całym świecie. Staramy się nie pomijać ważnych szczegółów w każdym obszarze.
+                            <!-- Stats Grid - 3 columns centered -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+
+                                <!-- Stat 1 -->
+                                <div class="flex flex-col items-center text-center">
+                                    <div class="w-40 h-40 lg:w-48 lg:h-48 rounded-full border-2 border-pink-500 flex flex-col items-center justify-center mb-6">
+                                        <span class="text-white text-4xl lg:text-5xl font-normal">150K</span>
+                                    </div>
+                                    <h3 class="text-white text-xl lg:text-2xl font-heading font-bold mb-3">Pobrań aplikacji</h3>
+                                    <p class="text-white/50 font-sans text-base leading-6 max-w-xs">
+                                        Nowych użytkowników w ciągu pierwszego miesiąca kampanii promocyjnej.
                                     </p>
-
-                                    <div>
-                                        <h3 class="text-white text-2xl font-heading font-bold leading-9 mb-4">Indywidualne podejście</h3>
-                                        <p class="text-white/50 font-sans text-lg leading-7">
-                                            Każdego ranka w naszej firmie zaczyna się od gorącej kawy i stand-upu.
-                                        </p>
-                                        <p class="text-white/50 font-sans text-lg leading-7 mt-4">
-                                            Dyskusja jest ważną częścią procesu rozwoju. W ten sposób rodzą się nowe pomysły i genialne rozwiązania.
-                                        </p>
-                                    </div>
                                 </div>
 
-                                <!-- Middle column - circle stat + text -->
-                                <div class="flex flex-col gap-8">
-                                    <!-- Stat circle -->
-                                    <div class="w-48 h-48 lg:w-56 lg:h-56 rounded-full border-2 border-pink-500 flex flex-col items-center justify-center mx-auto">
-                                        <span class="text-white text-5xl lg:text-6xl font-normal">15</span>
-                                        <span class="text-white/50 text-lg font-heading font-semibold capitalize mt-2">Nagród</span>
+                                <!-- Stat 2 -->
+                                <div class="flex flex-col items-center text-center">
+                                    <div class="w-40 h-40 lg:w-48 lg:h-48 rounded-full border-2 border-yellow-500 flex flex-col items-center justify-center mb-6">
+                                        <span class="text-white text-4xl lg:text-5xl font-normal">340%</span>
                                     </div>
-
-                                    <div>
-                                        <h3 class="text-white text-2xl font-heading font-bold leading-9 mb-4">Jak zaczyna się nasz dzień pracy</h3>
-                                        <p class="text-white/50 font-sans text-lg leading-7">
-                                            Każdego ranka w naszej firmie zaczyna się od gorącej kawy i stand-upu. Dyskusja jest ważną częścią procesu rozwoju.
-                                        </p>
-                                        <p class="text-white/50 font-sans text-lg leading-7 mt-4">
-                                            W ten sposób rodzą się nowe pomysły i genialne rozwiązania. Potem zabieramy się do pracy z nową energią i inspiracją.
-                                        </p>
-                                    </div>
+                                    <h3 class="text-white text-xl lg:text-2xl font-heading font-bold mb-3">Zwrot z inwestycji</h3>
+                                    <p class="text-white/50 font-sans text-base leading-6 max-w-xs">
+                                        ROI kampanii przekroczyło wszystkie oczekiwania klienta.
+                                    </p>
                                 </div>
 
-                                <!-- Right column - two circle stats -->
-                                <div class="flex flex-col gap-8 items-center">
-                                    <!-- Stat circle 1 -->
-                                    <div class="w-48 h-48 lg:w-56 lg:h-56 rounded-full border-2 border-pink-500 flex flex-col items-center justify-center">
-                                        <span class="text-white text-5xl lg:text-6xl font-normal">9</span>
-                                        <span class="text-white/50 text-lg font-heading font-semibold capitalize mt-2">Lat doświadczenia</span>
+                                <!-- Stat 3 -->
+                                <div class="flex flex-col items-center text-center">
+                                    <div class="w-40 h-40 lg:w-48 lg:h-48 rounded-full border-2 border-fuchsia-500 flex flex-col items-center justify-center mb-6">
+                                        <span class="text-white text-4xl lg:text-5xl font-normal">50</span>
                                     </div>
-
-                                    <!-- Stat circle 2 -->
-                                    <div class="w-48 h-48 lg:w-56 lg:h-56 rounded-full border-2 border-pink-500 flex flex-col items-center justify-center">
-                                        <span class="text-white text-5xl lg:text-6xl font-normal">354</span>
-                                        <span class="text-white/50 text-lg font-heading font-semibold capitalize mt-2">Udanych projektów</span>
-                                    </div>
+                                    <h3 class="text-white text-xl lg:text-2xl font-heading font-bold mb-3">Influencerów</h3>
+                                    <p class="text-white/50 font-sans text-base leading-6 max-w-xs">
+                                        Współpraca z twórcami z kategorii lifestyle, food i family.
+                                    </p>
                                 </div>
+
                             </div>
                         </div>
 
@@ -246,14 +227,76 @@
                             Kampania została podzielona na trzy fazy: awareness, consideration i conversion. W pierwszej fazie skupiliśmy się na budowaniu świadomości marki poprzez współpracę z macro-influencerami, którzy dotarli do szerokiej grupy odbiorców. W drugiej fazie wykorzystaliśmy micro-influencerów do tworzenia bardziej szczegółowych recenzji i tutoriali pokazujących funkcjonalność aplikacji.
                         </p>
 
+                        <!-- ============================================
+                           GALLERY BLOCK - Asymmetric grid with gradient borders
+                           ============================================ -->
+                        <div class="my-16 lg:my-24">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+
+                                <!-- Large image - left side, full height -->
+                                <div class="relative rounded-2xl p-[2px] h-[400px] lg:h-[500px]" style="background: linear-gradient(135deg, #FACC15 0%, #C026D3 50%, #EC4899 100%);">
+                                    <div class="w-full h-full rounded-2xl overflow-hidden bg-dark-900">
+                                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+                                             alt="Kampania Barbora - główne zdjęcie"
+                                             class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+
+                                <!-- Right side - two stacked images -->
+                                <div class="flex flex-col gap-4 lg:gap-6">
+                                    <!-- Top right image -->
+                                    <div class="relative rounded-2xl p-[2px] h-[190px] lg:h-[238px]" style="background: linear-gradient(135deg, #EC4899 0%, #C026D3 100%);">
+                                        <div class="w-full h-full rounded-2xl overflow-hidden bg-dark-900">
+                                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop"
+                                                 alt="Influencer marketing"
+                                                 class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+
+                                    <!-- Bottom right image -->
+                                    <div class="relative rounded-2xl p-[2px] h-[190px] lg:h-[238px]" style="background: linear-gradient(135deg, #FACC15 0%, #EC4899 100%);">
+                                        <div class="w-full h-full rounded-2xl overflow-hidden bg-dark-900">
+                                            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop"
+                                                 alt="Social media kampania"
+                                                 class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Caption -->
+                            <p class="text-white/40 font-sans text-sm mt-4 text-center">
+                                Materiały z kampanii influencer marketingowej dla Barbora
+                            </p>
+                        </div>
+
                         <p class="text-white text-xl font-normal leading-8 mb-8">
                             Ostatnia faza skupiła się na konwersji - influencerzy udostępniali unikalne kody rabatowe, które pozwoliły nam śledzić skuteczność każdej współpracy. Dzięki temu podejściu osiągnęliśmy ROI na poziomie 340% i przekroczyliśmy zakładane cele o 23%.
                         </p>
 
                         <!-- ============================================
-                           WORKING PROCESS BLOCK
+                           FEATURE IMAGE - Full width with gradient border
+                           ============================================ -->
+                        <div class="my-12 lg:my-16">
+                            <div class="relative rounded-2xl p-[3px]" style="background: linear-gradient(90deg, #FACC15 0%, #C026D3 35%, #EC4899 70%, #FACC15 100%);">
+                                <div class="w-full rounded-2xl overflow-hidden bg-dark-900">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=500&fit=crop"
+                                         alt="Analiza wyników kampanii"
+                                         class="w-full h-[300px] lg:h-[400px] object-cover">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ============================================
+                           WORKING PROCESS BLOCK - with gradient numbers
                            ============================================ -->
                         <div class="my-16 lg:my-24">
+                            <!-- Header -->
+                            <div class="flex items-center gap-4 mb-12">
+                                <div class="w-14 h-px bg-slate-400"></div>
+                                <span class="text-white/50 font-sans text-base uppercase tracking-wider">Jak działaliśmy</span>
+                            </div>
                             <h2 class="text-white text-3xl lg:text-4xl font-heading font-bold capitalize leading-10 mb-12">
                                 Proces realizacji
                             </h2>
@@ -261,28 +304,37 @@
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
                                 <!-- Step 1 -->
                                 <div class="flex flex-col gap-4">
-                                    <span class="text-pink-500 font-sans text-base uppercase tracking-wide">Krok 1</span>
+                                    <div class="flex items-center gap-4 mb-2">
+                                        <span class="text-5xl lg:text-6xl font-heading font-bold bg-gradient-to-r from-yellow-500 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent">01</span>
+                                    </div>
                                     <h3 class="text-white text-xl font-heading font-semibold capitalize">Planowanie i strategia</h3>
-                                    <p class="text-white/50 font-sans text-lg leading-7">
-                                        Pomogliśmy wyprzedzić konkurencję dzięki dogłębnej analizie rynku i precyzyjnemu targetowaniu.
+                                    <div class="w-12 h-0.5 bg-gradient-to-r from-yellow-500 to-pink-500"></div>
+                                    <p class="text-white/50 font-sans text-base leading-7">
+                                        Dogłębna analiza rynku i grupy docelowej. Dobór influencerów według kategorii i zasięgu. Opracowanie harmonogramu kampanii.
                                     </p>
                                 </div>
 
                                 <!-- Step 2 -->
                                 <div class="flex flex-col gap-4">
-                                    <span class="text-pink-500 font-sans text-base uppercase tracking-wide">Krok 2</span>
-                                    <h3 class="text-white text-xl font-heading font-semibold capitalize">Projektowanie i realizacja</h3>
-                                    <p class="text-white/50 font-sans text-lg leading-7">
-                                        Twój produkt będzie wyglądał atrakcyjnie dla klientów dzięki profesjonalnym kreacjom i contenowi.
+                                    <div class="flex items-center gap-4 mb-2">
+                                        <span class="text-5xl lg:text-6xl font-heading font-bold bg-gradient-to-r from-fuchsia-500 to-pink-500 bg-clip-text text-transparent">02</span>
+                                    </div>
+                                    <h3 class="text-white text-xl font-heading font-semibold capitalize">Produkcja contentu</h3>
+                                    <div class="w-12 h-0.5 bg-gradient-to-r from-fuchsia-500 to-pink-500"></div>
+                                    <p class="text-white/50 font-sans text-base leading-7">
+                                        Koordynacja współpracy z 50 influencerami. Tworzenie autentycznych materiałów. Nadzór nad jakością i spójnością przekazu.
                                     </p>
                                 </div>
 
                                 <!-- Step 3 -->
                                 <div class="flex flex-col gap-4">
-                                    <span class="text-pink-500 font-sans text-base uppercase tracking-wide">Krok 3</span>
-                                    <h3 class="text-white text-xl font-heading font-semibold capitalize">Testowanie i launch</h3>
-                                    <p class="text-white/50 font-sans text-lg leading-7">
-                                        Twój produkt jest gotowy. Czas zarabiać pieniądze i mierzyć wyniki kampanii.
+                                    <div class="flex items-center gap-4 mb-2">
+                                        <span class="text-5xl lg:text-6xl font-heading font-bold bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-transparent">03</span>
+                                    </div>
+                                    <h3 class="text-white text-xl font-heading font-semibold capitalize">Analiza i optymalizacja</h3>
+                                    <div class="w-12 h-0.5 bg-gradient-to-r from-pink-500 to-yellow-500"></div>
+                                    <p class="text-white/50 font-sans text-base leading-7">
+                                        Monitoring wyników w czasie rzeczywistym. Śledzenie konwersji przez unikalne kody. Raportowanie i rekomendacje.
                                     </p>
                                 </div>
                             </div>
