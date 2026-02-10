@@ -872,6 +872,12 @@
   background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
 }
 
+/* Header for blog pages without hero - solid dark background */
+.blog-header {
+  background: #0D0D0D;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
 /* Hero with background image */
 .cs-hero {
   position: relative;
