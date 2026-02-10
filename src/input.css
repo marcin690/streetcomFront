@@ -929,6 +929,8 @@
   position: relative;
   z-index: 2;
   background: #111114;
+  /* Add padding at bottom so footer doesn't cover content */
+  padding-bottom: 75vh;
 }
 
 @media (min-width: 1024px) {
@@ -946,6 +948,8 @@
   z-index: 3;
   background: #121318;
   min-height: 75vh;
+  /* Negative margin to pull footer up over the padding */
+  margin-top: -75vh;
 }
 
 .cs-footer .footer-container {

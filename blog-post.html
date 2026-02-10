@@ -15,9 +15,9 @@
 <body class="bg-dark-900 text-white">
 
     <!-- ============================================
-       HEADER — solid background for blog pages
+       HEADER — transparent, blending with hero background
        ============================================ -->
-    <header class="fixed top-0 left-0 right-0 z-header blog-header">
+    <header class="fixed top-0 left-0 right-0 z-header cs-header">
         <div class="max-w-[1400px] mx-auto px-4 lg:px-8 py-2 flex justify-between items-center h-[69px]">
 
             <!-- Left side: Logo + Nav -->
@@ -125,24 +125,36 @@
     <main class="lg:pl-[60px]">
 
         <!-- ============================================
-           BLOG POST CONTENT with integrated header
+           BLOG POST HERO — with background image fading to dark
            ============================================ -->
-        <section class="cs-content flex flex-col justify-start pt-32 lg:pt-40 pb-16">
+        <section class="cs-hero card-stack-section min-h-[75vh]">
+            <!-- Background image -->
+            <div class="cs-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&h=900&fit=crop');"></div>
+            <!-- Gradient overlay for fade effect -->
+            <div class="cs-hero-overlay"></div>
+
+            <div class="section-container relative z-10 h-full min-h-[75vh] flex items-center justify-center">
+                <div class="flex flex-col items-center text-center gap-6 max-w-4xl mx-auto">
+
+                    <!-- Subtitle with line -->
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-px bg-white"></div>
+                        <span class="text-white font-sans text-base uppercase tracking-wider">blog</span>
+                    </div>
+
+                    <h1 class="font-heading font-bold text-white" style="font-size: clamp(1.75rem, 4vw, 2.5rem); line-height: 1.3;">
+                        Where to find clients and how to develop cool products
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+           BLOG POST CONTENT
+           ============================================ -->
+        <section class="cs-content flex flex-col justify-start pt-16 lg:pt-24">
             <div class="section-container">
                 <div class="max-w-[1141px] mx-auto">
-
-                    <!-- Mini header integrated into content -->
-                    <header class="mb-12">
-                        <!-- Subtitle with line -->
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-14 h-px bg-white"></div>
-                            <span class="text-white font-sans text-base uppercase tracking-wider">blog</span>
-                        </div>
-
-                        <h1 class="font-heading font-bold text-white text-3xl lg:text-4xl leading-tight max-w-4xl">
-                            Where to find clients and how to develop cool products
-                        </h1>
-                    </header>
 
                     <!-- Article content -->
                     <article class="blog-post-content">
