@@ -364,7 +364,7 @@
            Figma: image centered left, text right, gap-10
            ============================================ -->
         <section id="instars"
-            class="bg-dark-900 relative overflow-hidden card-stack-section min-h-screen flex items-center justify-center">
+            class="bg-dark-900 relative card-stack-section min-h-screen flex items-center justify-center">
             <div class="section-container w-full py-12">
                 <div class="flex flex-col lg:flex-row items-center gap-10">
 
@@ -535,7 +535,7 @@
            DLACZEGO MY? SECTION — Testimonials + Logo strip
            ============================================ -->
         <section
-            class="bg-dark-900 relative overflow-hidden card-stack-section min-h-screen flex items-center justify-center">
+            class="bg-dark-900 relative card-stack-section min-h-screen flex items-center justify-center">
 
             <!-- Decorative blurred blob -->
             <div
@@ -791,6 +791,120 @@
     </main>
 
     <!-- ============================================
+       BRIEF POPUP MODAL
+       ============================================ -->
+    <div id="brief-modal" class="brief-modal">
+        <div class="brief-modal-backdrop"></div>
+        <div class="brief-modal-container">
+            <div class="brief-modal-content">
+
+                <!-- Background decoration -->
+                <div class="brief-modal-bg"></div>
+
+                <!-- Mini Hero Header -->
+                <div class="brief-modal-hero">
+                    <h2 class="font-heading font-bold text-2xl lg:text-3xl text-white">Wypełnij brief</h2>
+                    <p class="text-white/70 font-sans text-sm mt-1">Odezwiemy się w ciągu 24h</p>
+                </div>
+
+                <!-- Close button -->
+                <button type="button" class="brief-modal-close" id="brief-modal-close">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M13 1L1 13M1 1l12 12"/>
+                    </svg>
+                    <span>Zamknij</span>
+                </button>
+
+                <!-- Form -->
+                <form id="brief-form" class="brief-popup-form">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-5">
+
+                        <!-- Product -->
+                        <div class="flex flex-col gap-1.5 lg:col-span-2">
+                            <label class="text-white/80 font-sans text-xs uppercase tracking-wide">Produkt / usługa *</label>
+                            <textarea name="product" class="brief-popup-textarea" rows="2" placeholder="Opisz krótko swój produkt lub usługę..." required></textarea>
+                        </div>
+
+                        <!-- Goal -->
+                        <div class="flex flex-col gap-1.5">
+                            <label class="text-white/80 font-sans text-xs uppercase tracking-wide">Cel kampanii *</label>
+                            <select name="goal" class="brief-popup-select" required>
+                                <option value="">Wybierz z listy</option>
+                                <option value="Trial">Trial</option>
+                                <option value="Advocacy">Advocacy</option>
+                                <option value="Influencer Marketing">Influencer Marketing</option>
+                                <option value="Brand Awareness">Brand Awareness</option>
+                                <option value="Social Media">Social Media</option>
+                                <option value="UGC">UGC</option>
+                            </select>
+                        </div>
+
+                        <!-- Audience -->
+                        <div class="flex flex-col gap-1.5">
+                            <label class="text-white/80 font-sans text-xs uppercase tracking-wide">Grupa docelowa *</label>
+                            <input type="text" name="audience" class="brief-popup-input" placeholder="np. Kobiety 25-45" required>
+                        </div>
+
+                        <!-- Budget -->
+                        <div class="flex flex-col gap-1.5">
+                            <label class="text-white/80 font-sans text-xs uppercase tracking-wide">Szacunkowy budżet</label>
+                            <input type="text" name="budget" class="brief-popup-input" placeholder="np. 50 000 - 100 000 PLN">
+                        </div>
+
+                        <!-- Name -->
+                        <div class="flex flex-col gap-1.5">
+                            <label class="text-white/80 font-sans text-xs uppercase tracking-wide">Imię i nazwisko *</label>
+                            <input type="text" name="name" class="brief-popup-input" placeholder="Jan Kowalski" required>
+                        </div>
+
+                        <!-- Company -->
+                        <div class="flex flex-col gap-1.5">
+                            <label class="text-white/80 font-sans text-xs uppercase tracking-wide">Firma</label>
+                            <input type="text" name="company" class="brief-popup-input" placeholder="Nazwa firmy">
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex flex-col gap-1.5">
+                            <label class="text-white/80 font-sans text-xs uppercase tracking-wide">Telefon *</label>
+                            <input type="tel" name="phone" class="brief-popup-input" placeholder="+48 123 456 789" required>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex flex-col gap-1.5">
+                            <label class="text-white/80 font-sans text-xs uppercase tracking-wide">E-mail *</label>
+                            <input type="email" name="email" class="brief-popup-input" placeholder="jan@firma.pl" required>
+                        </div>
+
+                        <!-- Consents -->
+                        <div class="flex flex-col gap-2 lg:col-span-2 mt-2">
+                            <label class="brief-popup-checkbox">
+                                <input type="checkbox" name="consent_marketing" required>
+                                <span>Wyrażam zgodę na otrzymywanie informacji handlowych drogą elektroniczną.</span>
+                            </label>
+                            <label class="brief-popup-checkbox">
+                                <input type="checkbox" name="consent_direct" required>
+                                <span>Wyrażam zgodę na marketing bezpośredni przy użyciu urządzeń telekomunikacyjnych.</span>
+                            </label>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="lg:col-span-2 flex justify-center mt-4">
+                            <button type="submit" class="btn">
+                                <span>Wyślij brief</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
        SCRIPTS
        ============================================ -->
     <script>
@@ -824,29 +938,14 @@
         });
 
         // ============================================
-        // CARD-STACK SCROLL: depth shadow + subtle scale
+        // CARD-STACK SCROLL: z-index + brightness
         // ============================================
         const sections = document.querySelectorAll('.card-stack-section');
 
-        const observerOptions = {
-            root: null,
-            threshold: Array.from({ length: 20 }, (_, i) => i / 19) // 0, 0.05, 0.1, ..., 1
-        };
-
-        const sectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                const section = entry.target;
-                const shadow = section.querySelector(':before') || section;
-
-                // When section starts entering viewport from below,
-                // show top shadow for depth effect
-                if (entry.isIntersecting && entry.intersectionRatio < 0.95) {
-                    section.style.setProperty('--shadow-opacity', '1');
-                } else {
-                    section.style.setProperty('--shadow-opacity', '0');
-                }
-            });
-        }, observerOptions);
+        // Assign z-index dynamically to each section (most reliable)
+        sections.forEach((section, i) => {
+            section.style.zIndex = i + 1;
+        });
 
         // Card-stack scroll effect — DESKTOP ONLY (lg: 1024px+)
         let ticking = false;
@@ -929,6 +1028,49 @@
 
         scaleWatermark();
         window.addEventListener('resize', scaleWatermark);
+
+        // ============================================
+        // BRIEF MODAL
+        // ============================================
+        const briefModal = document.getElementById('brief-modal');
+        const briefModalClose = document.getElementById('brief-modal-close');
+        const briefForm = document.getElementById('brief-form');
+
+        // Open modal - all brief links
+        document.querySelectorAll('a[href="#brief"], a[href="brief.html"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                briefModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modal
+        function closeBriefModal() {
+            briefModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        briefModalClose.addEventListener('click', closeBriefModal);
+
+        // Close on backdrop click
+        briefModal.querySelector('.brief-modal-backdrop').addEventListener('click', closeBriefModal);
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && briefModal.classList.contains('active')) {
+                closeBriefModal();
+            }
+        });
+
+        // Form submit
+        briefForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // TODO: Send to CRM API
+            alert('Dziękujemy! Twój brief został wysłany. Skontaktujemy się wkrótce.');
+            closeBriefModal();
+            briefForm.reset();
+        });
     </script>
 
 </body>

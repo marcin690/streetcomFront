@@ -744,25 +744,15 @@
 /* Card-stack only on desktop (lg+) */
 .card-stack-section {
   min-height: 100vh;
-  overflow: hidden;
 }
 
 @media (min-width: 1024px) {
   .card-stack-section {
     position: sticky;
     top: 0;
+    overflow: clip;
     will-change: transform;
   }
-
-  .card-stack-section:nth-child(1) { z-index: 1; }
-  .card-stack-section:nth-child(2) { z-index: 2; }
-  .card-stack-section:nth-child(3) { z-index: 3; }
-  .card-stack-section:nth-child(4) { z-index: 4; }
-  .card-stack-section:nth-child(5) { z-index: 5; }
-  .card-stack-section:nth-child(6) { z-index: 6; }
-  .card-stack-section:nth-child(7) { z-index: 7; }
-  .card-stack-section:nth-child(8) { z-index: 8; }
-  .card-stack-section:nth-child(9) { z-index: 9; }
 
   .card-stack-section::before {
     content: '';
@@ -838,4 +828,402 @@
   .split-section-content--left {
     margin-right: 50%;
   }
+
+  /*
+   * On desktop, align text to the same grid as section-container.
+   * Container = max-w-[1400px] centered, so each half = 700px.
+   * We use padding to push text inward to match container edges.
+   */
+  .split-section-content--left .section-container {
+    max-width: none;
+    margin-left: auto;
+    margin-right: 0;
+    padding-right: 40px;
+    width: 700px;
+  }
+
+  .split-section-content--right .section-container {
+    max-width: none;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 40px;
+    width: 700px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .split-section-content--left .section-container {
+    padding-right: 60px;
+  }
+
+  .split-section-content--right .section-container {
+    padding-left: 60px;
+  }
+}
+
+/* ============================================
+   CASE STUDIES PAGE
+   ============================================ */
+
+/* Transparent header for case studies page */
+.cs-header {
+  background: transparent;
+  /* Subtle gradient at top for readability */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+}
+
+/* Hero with background image */
+.cs-hero {
+  position: relative;
+  overflow: clip;
+  min-height: 75vh;
+}
+
+@media (min-width: 1024px) {
+  .cs-hero {
+    position: sticky;
+    top: 0;
+    will-change: transform;
+  }
+}
+
+.cs-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Gradient overlay: fades image to dark at bottom */
+.cs-hero-overlay {
+  position: absolute;
+  inset: 0;
+  /* Gradient from transparent at top to dark-900 at bottom */
+  background: linear-gradient(
+    to bottom,
+    rgba(17, 17, 20, 0.3) 0%,
+    rgba(17, 17, 20, 0.5) 40%,
+    rgba(17, 17, 20, 0.85) 70%,
+    rgba(17, 17, 20, 1) 100%
+  );
+}
+
+/* Filter links — simple text, All Round Gothic */
+.cs-filter-link {
+  @apply font-heading font-semibold text-xl text-white capitalize leading-6 bg-transparent border-0 cursor-pointer transition-colors duration-200;
+}
+
+.cs-filter-link:hover {
+  @apply text-pink-500;
+}
+
+/* Case studies page - content section with sticky effect */
+.cs-content {
+  position: relative;
+  z-index: 2;
+  background: #111114;
+}
+
+@media (min-width: 1024px) {
+  .cs-content {
+    position: sticky;
+    top: 0;
+    overflow: clip;
+    will-change: transform;
+  }
+}
+
+/* Case studies page - footer 3/4 height */
+.cs-footer {
+  position: relative;
+  z-index: 3;
+  background: #121318;
+  min-height: 75vh;
+}
+
+.cs-footer .footer-container {
+  min-height: 75vh;
+}
+
+.cs-filter-link--active {
+  @apply text-pink-500;
+}
+
+/* Case study card */
+.cs-card {
+  @apply relative bg-dark-800 rounded-lg overflow-hidden transition-all duration-300;
+}
+
+.cs-card:hover {
+  @apply transform -translate-y-1;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cs-card a {
+  @apply flex flex-col h-full;
+}
+
+.cs-card-image {
+  @apply relative w-full aspect-[3/2] overflow-hidden;
+}
+
+.cs-card-image img {
+  @apply w-full h-full object-cover transition-transform duration-500;
+}
+
+.cs-card:hover .cs-card-image img {
+  @apply scale-105;
+}
+
+.cs-card-content {
+  @apply flex flex-col gap-3 p-6;
+}
+
+.cs-card-label {
+  @apply text-purple-500 font-sans uppercase text-xs tracking-widest;
+}
+
+.cs-card-title {
+  @apply text-white font-heading font-semibold text-xl leading-tight;
+}
+
+.cs-card-desc {
+  @apply text-light-gray font-sans text-base leading-relaxed line-clamp-3;
+}
+
+.cs-card-meta {
+  @apply flex items-center gap-4 text-light-gray/60 font-sans text-sm mt-2;
+}
+
+.cs-card-meta span:not(:last-child)::after {
+  content: '•';
+  @apply ml-4;
+}
+
+/* Arrow button on card */
+.cs-card-arrow {
+  @apply absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-dark-700/80 text-white opacity-0 transition-all duration-300;
+}
+
+.cs-card:hover .cs-card-arrow {
+  @apply opacity-100;
+}
+
+/* Utility for line clamping */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ============================================
+   BRIEF FORM PAGE
+   ============================================ */
+
+/* Progress bar */
+.brief-progress {
+  @apply flex items-center justify-center gap-0 mb-12;
+}
+
+.brief-progress-step {
+  @apply w-12 h-12 rounded-full flex items-center justify-center font-heading font-bold text-lg transition-all duration-300;
+  background: #27272A;
+  color: #71717A;
+}
+
+.brief-progress-step.active {
+  background: linear-gradient(135deg, #FDD80A 0%, #F02F8D 50%, #B700FF 100%);
+  color: #111114;
+}
+
+.brief-progress-step.completed {
+  background: #22C55E;
+  color: white;
+}
+
+.brief-progress-line {
+  @apply w-16 h-0.5 bg-dark-700;
+}
+
+/* Form elements */
+.brief-label {
+  @apply text-white font-heading font-semibold text-lg;
+}
+
+.brief-input {
+  @apply w-full bg-transparent border-b-2 border-dark-700 text-white font-sans text-lg leading-8 pb-3 pt-2 outline-none placeholder-white/40 transition-colors duration-200;
+}
+
+.brief-input:focus {
+  border-bottom-color: #EC4899;
+}
+
+.brief-textarea {
+  @apply w-full bg-dark-800 border-2 border-dark-700 rounded-lg text-white font-sans text-lg leading-7 p-4 outline-none placeholder-white/40 resize-none transition-colors duration-200;
+}
+
+.brief-textarea:focus {
+  border-color: #EC4899;
+}
+
+.brief-select {
+  @apply w-full bg-dark-800 border-2 border-dark-700 rounded-lg text-white font-sans text-lg leading-8 px-4 py-3 outline-none cursor-pointer transition-colors duration-200;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.5rem;
+}
+
+.brief-select:focus {
+  border-color: #EC4899;
+}
+
+.brief-select option {
+  background: #27272A;
+  color: white;
+}
+
+/* Checkbox */
+.brief-checkbox {
+  @apply flex items-start gap-3 cursor-pointer;
+}
+
+.brief-checkbox input[type="checkbox"] {
+  @apply w-5 h-5 mt-1 flex-shrink-0 accent-pink-500 cursor-pointer;
+}
+
+.brief-checkbox span {
+  @apply text-white/70 font-sans text-sm leading-5;
+}
+
+/* Step transitions */
+.brief-step {
+  @apply transition-opacity duration-300;
+}
+
+.brief-step.active {
+  @apply opacity-100;
+}
+
+/* ============================================
+   BRIEF POPUP MODAL
+   ============================================ */
+
+.brief-modal {
+  @apply fixed inset-0 z-[9999] opacity-0 pointer-events-none transition-opacity duration-300;
+}
+
+.brief-modal.active {
+  @apply opacity-100 pointer-events-auto;
+}
+
+.brief-modal-backdrop {
+  @apply absolute inset-0 bg-black/85 backdrop-blur-sm;
+}
+
+.brief-modal-container {
+  @apply absolute inset-0 flex items-center justify-center p-4 overflow-y-auto;
+}
+
+/* Modal content with gradient border */
+.brief-modal-content {
+  @apply relative w-full max-w-3xl rounded-2xl overflow-hidden;
+  padding: 3px; /* border width */
+  background: linear-gradient(246deg, #FACC15 0%, #C026D3 68%, #EC4899 100%);
+}
+
+.brief-modal-content::before {
+  content: '';
+  @apply absolute inset-[3px] rounded-2xl;
+  background: #111114;
+  z-index: 0;
+}
+
+/* Background decoration - woman image */
+.brief-modal-bg {
+  @apply absolute bottom-0 right-0 pointer-events-none;
+  width: 320px;
+  height: 400px;
+  background-image: url('../assets/img/brief.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  opacity: 0.12;
+  z-index: 1;
+  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
+  mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
+}
+
+/* Mini hero header */
+.brief-modal-hero {
+  @apply relative z-10 text-center py-6 px-8 -mx-8 -mt-8 mb-6;
+  background: linear-gradient(180deg, rgba(192, 38, 211, 0.15) 0%, transparent 100%);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin: -3px -3px 24px -3px;
+  padding: 24px 32px;
+  border-radius: 16px 16px 0 0;
+}
+
+/* Close button - yellow style */
+.brief-modal-close {
+  @apply absolute top-6 right-6 z-20 inline-flex items-center gap-2 px-4 py-2 text-yellow-500 font-heading font-semibold text-sm rounded-full border border-yellow-500 bg-transparent transition-all duration-200;
+}
+
+.brief-modal-close:hover {
+  @apply bg-yellow-500 text-dark-900;
+}
+
+/* Form wrapper */
+.brief-popup-form {
+  @apply relative z-10 px-6 pb-6;
+}
+
+/* Popup form inputs - compact */
+.brief-popup-input {
+  @apply w-full bg-dark-800 border border-dark-700 rounded-lg text-white font-sans text-sm px-3 py-2.5 outline-none placeholder-white/40 transition-all duration-200;
+}
+
+.brief-popup-input:focus {
+  @apply border-pink-500 bg-dark-900;
+}
+
+.brief-popup-textarea {
+  @apply w-full bg-dark-800 border border-dark-700 rounded-lg text-white font-sans text-sm px-3 py-2.5 outline-none placeholder-white/40 resize-none transition-all duration-200;
+}
+
+.brief-popup-textarea:focus {
+  @apply border-pink-500 bg-dark-900;
+}
+
+.brief-popup-select {
+  @apply w-full bg-dark-800 border border-dark-700 rounded-lg text-white font-sans text-sm px-3 py-2.5 outline-none cursor-pointer transition-all duration-200;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+}
+
+.brief-popup-select:focus {
+  @apply border-pink-500 bg-dark-900;
+}
+
+.brief-popup-select option {
+  background: #1A1A1E;
+  color: white;
+}
+
+.brief-popup-checkbox {
+  @apply flex items-start gap-2 cursor-pointer;
+}
+
+.brief-popup-checkbox input[type="checkbox"] {
+  @apply w-4 h-4 mt-0.5 flex-shrink-0 accent-pink-500 cursor-pointer;
+}
+
+.brief-popup-checkbox span {
+  @apply text-white/50 font-sans text-xs leading-4;
 }
