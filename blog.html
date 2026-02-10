@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Where to find clients and how to develop cool products - Streetcom</title>
+    <title>Blog - Streetcom</title>
 
     <!-- Fonts loaded via @font-face in input.css (Proxima Nova + All Round Gothic) -->
 
@@ -15,7 +15,7 @@
 <body class="bg-dark-900 text-white">
 
     <!-- ============================================
-       HEADER — transparent, blending with hero background
+       HEADER — transparent, blending with content
        ============================================ -->
     <header class="fixed top-0 left-0 right-0 z-header cs-header">
         <div class="max-w-[1400px] mx-auto px-4 lg:px-8 py-2 flex justify-between items-center h-[69px]">
@@ -51,7 +51,7 @@
                                 <a href="case-studies.html"
                                     class="block px-4 py-2 text-body text-white hover:text-yellow-500 hover:bg-dark-700">Case
                                     studies</a>
-                                <a href="#"
+                                <a href="blog.html"
                                     class="block px-4 py-2 text-body text-yellow-500 hover:bg-dark-700">Blog</a>
                             </div>
                         </div>
@@ -86,7 +86,7 @@
             <nav class="px-4 py-6 flex flex-col gap-4">
                 <a href="index.html#o-nas" class="nav-link text-body-lg py-2">O nas</a>
                 <a href="case-studies.html" class="nav-link text-body-lg py-2">Case studies</a>
-                <a href="#" class="nav-link-active text-body-lg py-2">Blog</a>
+                <a href="blog.html" class="nav-link-active text-body-lg py-2">Blog</a>
                 <a href="index.html#brief" class="nav-link text-body-lg py-2">Brief</a>
                 <a href="index.html#instars" class="nav-link text-body-lg py-2">Instars</a>
                 <a href="index.html#kontakt" class="nav-link text-body-lg py-2">Kontakt</a>
@@ -125,114 +125,183 @@
     <main class="lg:pl-[60px]">
 
         <!-- ============================================
-           BLOG POST CONTENT with integrated header
+           BLOG LIST CONTENT
            ============================================ -->
         <section class="cs-content flex flex-col justify-start pt-32 lg:pt-40 pb-16">
             <div class="section-container">
                 <div class="max-w-[1141px] mx-auto">
 
                     <!-- Mini header integrated into content -->
-                    <header class="mb-12">
+                    <header class="mb-16">
                         <!-- Subtitle with line -->
                         <div class="flex items-center gap-4 mb-6">
                             <div class="w-14 h-px bg-white"></div>
                             <span class="text-white font-sans text-base uppercase tracking-wider">blog</span>
                         </div>
 
-                        <h1 class="font-heading font-bold text-white text-3xl lg:text-4xl leading-tight max-w-4xl">
-                            Where to find clients and how to develop cool products
+                        <h1 class="font-heading font-bold text-white text-3xl lg:text-4xl leading-tight max-w-3xl">
+                            Inspiracje, trendy i praktyczne porady z marketingu
                         </h1>
                     </header>
 
-                    <!-- Article content -->
-                    <article class="blog-post-content">
+                    <!-- Blog posts grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                        <!-- Intro text -->
-                        <p class="text-white text-xl font-normal leading-8 tracking-wide mb-8">
-                            Mobile app development is the act or process by which a mobile app is developed for mobile devices, such as personal digital assistants, enterprise digital assistants or mobile phones. These applications can be pre-installed on phones during manufacturing platforms, or delivered as web applications using server-side or client-side processing (e.g., JavaScript) to provide an "application-like" experience within a <span class="text-pink-500">Web browser</span>. Application software developers also must consider a long array of screen sizes, hardware specifications. Mobile app development is the act or process by which a mobile app is developed for mobile devices, such as personal digital assistants, enterprise digital assistants or mobile phones. These applications can be pre-installed on phones during manufacturing platforms, or delivered as web applications using server-side or client-side processing (e.g., JavaScript) to provide an "application-like" experience within a Web browser.
-                        </p>
+                        <!-- Blog Post Card 1 -->
+                        <article class="blog-card group">
+                            <a href="blog-post.html" class="block">
+                                <div class="blog-card-image">
+                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Blog post">
+                                </div>
+                                <div class="blog-card-content">
+                                    <h3 class="blog-card-title group-hover:text-pink-500 transition-colors">
+                                        Where to find clients and how to develop cool products
+                                    </h3>
+                                    <p class="blog-card-excerpt">
+                                        Mobile app development is the act or process by which a mobile app is developed for mobile devices...
+                                    </p>
+                                    <div class="blog-card-meta">
+                                        <span>15.01.2025</span>
+                                        <span>5 min</span>
+                                    </div>
+                                    <!-- Tags aligned right -->
+                                    <div class="flex flex-wrap justify-end gap-2 mt-4">
+                                        <span class="px-3 py-1 bg-dark-800 text-white/70 font-sans text-sm">Portfolio</span>
+                                        <span class="px-3 py-1 bg-dark-800 text-white/70 font-sans text-sm">Business</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
 
-                        <!-- Quote block -->
-                        <blockquote class="bg-dark-800 p-8 lg:p-12 my-12 relative">
-                            <div class="absolute top-8 right-8 lg:top-12 lg:right-12 opacity-20">
-                                <svg class="w-20 h-20 text-pink-500" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                                </svg>
-                            </div>
-                            <p class="text-white text-2xl lg:text-3xl font-medium leading-relaxed mb-8 max-w-4xl">
-                                Mobile app development is the act or process by which a mobile app is developed for mobile devices, such as personal digital assistants, enterprise digital assistants.
-                            </p>
-                            <footer>
-                                <cite class="not-italic">
-                                    <span class="block text-white text-xl font-heading capitalize">Marina Luidance</span>
-                                    <span class="block text-slate-400 text-base">Project Coordinator</span>
-                                </cite>
-                            </footer>
-                        </blockquote>
+                        <!-- Blog Post Card 2 -->
+                        <article class="blog-card group">
+                            <a href="blog-post.html" class="block">
+                                <div class="blog-card-image">
+                                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop" alt="Blog post">
+                                </div>
+                                <div class="blog-card-content">
+                                    <h3 class="blog-card-title group-hover:text-pink-500 transition-colors">
+                                        SEO Optimization strategies for modern brands
+                                    </h3>
+                                    <p class="blog-card-excerpt">
+                                        Learn how to optimize your brand's online presence with proven SEO techniques...
+                                    </p>
+                                    <div class="blog-card-meta">
+                                        <span>10.01.2025</span>
+                                        <span>7 min</span>
+                                    </div>
+                                    <!-- Tags aligned right -->
+                                    <div class="flex flex-wrap justify-end gap-2 mt-4">
+                                        <span class="px-3 py-1 bg-dark-800 text-white/70 font-sans text-sm">Creative</span>
+                                        <span class="px-3 py-1 bg-dark-800 text-white/70 font-sans text-sm">Web</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
 
-                        <!-- More text -->
-                        <p class="text-white text-xl font-normal leading-8 mb-8">
-                            These applications can be pre-installed on phones during manufacturing platforms, or delivered as web applications using server-side or client-side processing (e.g., JavaScript) to provide an "application-like" experience within a Web browser. Application software developers also must consider a long array of screen sizes, hardware specifications.
-                        </p>
+                        <!-- Blog Post Card 3 -->
+                        <article class="blog-card group">
+                            <a href="blog-post.html" class="block">
+                                <div class="blog-card-image">
+                                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&h=400&fit=crop" alt="Blog post">
+                                </div>
+                                <div class="blog-card-content">
+                                    <h3 class="blog-card-title group-hover:text-pink-500 transition-colors">
+                                        Influencer marketing trends in 2025
+                                    </h3>
+                                    <p class="blog-card-excerpt">
+                                        Discover the latest trends shaping influencer marketing this year...
+                                    </p>
+                                    <div class="blog-card-meta">
+                                        <span>05.01.2025</span>
+                                        <span>6 min</span>
+                                    </div>
+                                    <!-- Tags aligned right -->
+                                    <div class="flex flex-wrap justify-end gap-2 mt-4">
+                                        <span class="px-3 py-1 bg-dark-800 text-white/70 font-sans text-sm">Business</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
 
-                        <p class="text-white text-xl font-normal leading-8 mb-8">
-                            These applications can be pre-installed on phones during manufacturing platforms, or delivered as web applications using server-side or client-side processing (e.g., JavaScript) to provide an "application-like" experience within a Web browser. Application software developers also must consider a long array of screen sizes, hardware specifications. These applications can be pre-installed on phones during manufacturing platforms, or delivered as web applications using server-side or client-side processing (e.g., JavaScript) to provide an "application-like" experience within a Web browser. Application software developers also must consider a long array of screen sizes, hardware specifications.
-                        </p>
+                        <!-- Blog Post Card 4 -->
+                        <article class="blog-card group">
+                            <a href="blog-post.html" class="block">
+                                <div class="blog-card-image">
+                                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop" alt="Blog post">
+                                </div>
+                                <div class="blog-card-content">
+                                    <h3 class="blog-card-title group-hover:text-pink-500 transition-colors">
+                                        Building authentic brand communities
+                                    </h3>
+                                    <p class="blog-card-excerpt">
+                                        How to create and nurture authentic communities around your brand...
+                                    </p>
+                                    <div class="blog-card-meta">
+                                        <span>28.12.2024</span>
+                                        <span>8 min</span>
+                                    </div>
+                                    <!-- Tags aligned right -->
+                                    <div class="flex flex-wrap justify-end gap-2 mt-4">
+                                        <span class="px-3 py-1 bg-dark-800 text-white/70 font-sans text-sm">Creative</span>
+                                        <span class="px-3 py-1 bg-dark-800 text-white/70 font-sans text-sm">Portfolio</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
 
-                        <!-- Large heading -->
-                        <h2 class="text-white text-3xl lg:text-4xl font-heading font-normal leading-tight mb-8 mt-12">
-                            Mobile app development is the act or process by which a mobile app is developed for mobile devices, such as personal digital assistants, enterprise digital assistants or mobile phones. Developed for mobile devices, such as personal digital assistants, enterprise digital assistants or mobile phones.
-                        </h2>
+                        <!-- Blog Post Card 5 -->
+                        <article class="blog-card group">
+                            <a href="blog-post.html" class="block">
+                                <div class="blog-card-image">
+                                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Blog post">
+                                </div>
+                                <div class="blog-card-content">
+                                    <h3 class="blog-card-title group-hover:text-pink-500 transition-colors">
+                                        Data-driven marketing strategies
+                                    </h3>
+                                    <p class="blog-card-excerpt">
+                                        Using data analytics to optimize your marketing campaigns...
+                                    </p>
+                                    <div class="blog-card-meta">
+                                        <span>20.12.2024</span>
+                                        <span>4 min</span>
+                                    </div>
+                                    <!-- Tags aligned right -->
+                                    <div class="flex flex-wrap justify-end gap-2 mt-4">
+                                        <span class="px-3 py-1 bg-dark-800 text-white/70 font-sans text-sm">Web</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
 
-                        <!-- Image placeholder -->
-                        <div class="w-full h-[463px] bg-dark-800 my-12 flex items-center justify-center overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop" alt="Blog post image" class="w-full h-full object-cover">
-                        </div>
+                        <!-- Blog Post Card 6 -->
+                        <article class="blog-card group">
+                            <a href="blog-post.html" class="block">
+                                <div class="blog-card-image">
+                                    <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=600&h=400&fit=crop" alt="Blog post">
+                                </div>
+                                <div class="blog-card-content">
+                                    <h3 class="blog-card-title group-hover:text-pink-500 transition-colors">
+                                        Social media content that converts
+                                    </h3>
+                                    <p class="blog-card-excerpt">
+                                        Create engaging social media content that drives real results...
+                                    </p>
+                                    <div class="blog-card-meta">
+                                        <span>15.12.2024</span>
+                                        <span>5 min</span>
+                                    </div>
+                                    <!-- Tags aligned right -->
+                                    <div class="flex flex-wrap justify-end gap-2 mt-4">
+                                        <span class="px-3 py-1 bg-dark-800 text-white/70 font-sans text-sm">Creative</span>
+                                        <span class="px-3 py-1 bg-dark-800 text-white/70 font-sans text-sm">Business</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
 
-                    </article>
-
-                    <!-- Tags + Share row - under article, aligned right -->
-                    <div class="flex flex-wrap items-center justify-end gap-6 mt-12 mb-12">
-                        <!-- Tags -->
-                        <div class="flex flex-wrap items-center gap-2.5">
-                            <span class="px-4 py-1 bg-dark-800 text-white font-sans text-base">Portfolio</span>
-                            <span class="px-4 py-1 bg-dark-800 text-white font-sans text-base">Business</span>
-                            <span class="px-4 py-1 bg-dark-800 text-white font-sans text-base">Creative</span>
-                            <span class="px-4 py-1 bg-dark-800 text-white font-sans text-base">Web</span>
-                        </div>
-                        <!-- Share -->
-                        <button class="flex items-center gap-2 text-white font-sans text-base uppercase tracking-wider hover:text-pink-500 transition-colors">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/>
-                            </svg>
-                            <span>Share</span>
-                        </button>
                     </div>
-
-                    <!-- Navigation between posts -->
-                    <nav class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-8 pt-12 border-t border-dark-700">
-                        <!-- Prev post -->
-                        <a href="#" class="group flex flex-col gap-2">
-                            <div class="flex items-center gap-4">
-                                <span class="text-white font-sans text-base uppercase tracking-wide">prev post</span>
-                                <div class="w-24 h-px bg-white"></div>
-                            </div>
-                            <span class="text-white text-xl font-heading font-semibold capitalize group-hover:text-pink-500 transition-colors">
-                                Site Development for Claros
-                            </span>
-                        </a>
-
-                        <!-- Next post -->
-                        <a href="#" class="group flex flex-col gap-2 text-right sm:items-end">
-                            <div class="flex items-center gap-4">
-                                <div class="w-24 h-px bg-pink-500"></div>
-                                <span class="text-pink-500 font-sans text-base uppercase tracking-wide">Next post</span>
-                            </div>
-                            <span class="text-pink-500 text-xl font-heading font-semibold capitalize group-hover:text-white transition-colors">
-                                SEO Optimization for Marvelius
-                            </span>
-                        </a>
-                    </nav>
 
                 </div>
             </div>
