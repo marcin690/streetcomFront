@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Where to find clients and how to develop cool products - Streetcom</title>
+
+    <!-- Fonts loaded via @font-face in input.css (Proxima Nova + All Round Gothic) -->
+
+    <!-- Compiled Tailwind CSS -->
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+
+<body class="bg-dark-900 text-white">
+
+    <!-- ============================================
+       HEADER — transparent, blending with hero background
+       ============================================ -->
+    <header class="fixed top-0 left-0 right-0 z-header cs-header">
+        <div class="max-w-[1400px] mx-auto px-4 lg:px-8 py-2 flex justify-between items-center h-[69px]">
+
+            <!-- Left side: Logo + Nav -->
+            <div class="flex items-center gap-8 lg:gap-[78px]">
+
+                <!-- Logo placeholder -->
+                <a href="/" class="block">
+                    <svg width="164" height="24" viewBox="0 0 164 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M146.583 4.99811H147.384L148.185 5.07867L148.945 5.23979L149.786 5.52176L150.627 5.96485L151.108 6.32803L151.508 6.69122L151.708 6.89196L152.109 7.33571V7.41627L152.309 7.21487L152.789 6.69056L153.23 6.28775L153.83 5.88494L154.511 5.52176L155.351 5.23979L156.112 5.07867L156.913 4.99811H157.714L158.555 5.07867L159.356 5.23979L160.317 5.56204L161.077 5.96485L161.638 6.36765L162.158 6.85168L162.599 7.37599L163.039 8.10104L163.359 8.78648L163.6 9.51219L163.8 10.4789L163.88 11.1644L163.92 11.9304V20.7564L163.88 20.7967H159.235L159.195 20.7571L159.155 11.688L159.075 11.1241L158.915 10.64L158.675 10.1976L158.475 9.95528L158.034 9.67331L157.594 9.51219L156.953 9.43097L156.312 9.47125L155.872 9.59275L155.391 9.83443L155.191 9.99556L154.911 10.3984L154.711 10.8421L154.591 11.3255L154.551 11.6887L154.511 20.7967H149.826L149.786 20.7571L149.746 11.5269L149.586 10.8018L149.306 10.2372L148.985 9.87405L148.345 9.55247L147.984 9.47125L147.384 9.43163L146.743 9.51219L146.182 9.71359L145.822 9.99556L145.582 10.2775L145.342 10.7615L145.181 11.4463L145.141 11.8901L145.101 20.7967H140.417V11.3658L140.537 10.3178L140.778 9.31012L141.058 8.54413L141.498 7.69824L141.979 7.05308L142.619 6.40859L143.18 6.00579L143.82 5.6426L144.421 5.40092L145.101 5.19951L146.062 5.03839L146.583 4.99811ZM71.63 4.99811H72.4709L73.3913 5.07867L74.3924 5.28007L75.1933 5.52176L76.0343 5.88494L76.6746 6.24747L77.2355 6.65028L77.6757 7.01346L78.0365 7.33571L78.3166 7.65796L78.7167 8.14132L79.1576 8.82676L79.5177 9.51219L79.8778 10.4789L80.1179 11.4866L80.238 12.4943V14.4291L68.7068 14.4687L68.9476 15.1951L69.2677 15.759L69.6679 16.2021L70.2287 16.5653L70.6689 16.7667L71.3498 16.9278L71.63 16.9681H72.591L73.4313 16.8472L74.0322 16.6458L74.4324 16.4042L74.8332 16.041L74.9533 15.8798H79.7978L79.7178 16.243L79.3176 17.1695L78.8768 17.8952L78.4766 18.4188L78.0365 18.9029L77.6757 19.2661L76.9954 19.7897L76.3945 20.1522L75.7542 20.4745L75.0733 20.7564L74.1923 20.9988L73.2713 21.1599L72.8711 21.1995H71.2298L70.2688 21.0794L69.3077 20.837L68.5468 20.555L67.6257 20.112L67.0255 19.7091L66.4646 19.2654L65.8244 18.6605L65.4636 18.2181L65.024 17.6132L64.6632 16.9681L64.3825 16.3639L64.0623 15.3965L63.8623 14.4291L63.7822 13.6235V12.6151L63.9023 11.5672L64.1024 10.681L64.3825 9.87471L64.8233 8.9476L65.3035 8.22189L65.6243 7.81908L66.0645 7.33571L66.3846 7.0128L67.0655 6.48915L67.7058 6.08635L68.3467 5.76344L69.1477 5.4412L70.0687 5.19951L71.0691 5.03839L71.63 4.99811ZM71.5499 9.22956L70.7489 9.39069L70.2688 9.59275L69.8679 9.83443L69.4678 10.1976L69.2277 10.4789L68.9076 11.0435L68.7868 11.4463H75.3934L75.2734 11.0831L74.9933 10.5595L74.6331 10.1171L74.2323 9.79349L73.6321 9.47125L72.8711 9.26984L72.591 9.23022L71.5499 9.22956ZM53.4522 4.99811H54.2525L55.1735 5.07867L56.0545 5.23979L56.8549 5.48148L57.4964 5.72316L58.4168 6.20719L59.0977 6.69056L59.698 7.21487L60.0588 7.57739L60.4989 8.14132L60.7791 8.54413L61.1792 9.22956L61.54 10.0761L61.7801 10.8421L61.9402 11.6081L62.0202 12.2929L62.0602 14.3888L62.0209 14.4284L50.489 14.4694L50.7298 15.1548L51.0099 15.6784L51.33 16.0812L51.8109 16.4444L52.3711 16.7264L53.1321 16.9278L53.4522 16.9681H54.4132L55.2136 16.8472L55.8144 16.6458L56.1753 16.4444L56.5354 16.1618L56.7755 15.8798H61.58L61.62 15.9604L61.2593 16.8472L60.8591 17.6132L60.3789 18.298L59.9387 18.782L59.3778 19.346L58.6169 19.9106L57.8966 20.3134L57.0963 20.6765L56.3353 20.9176L55.3343 21.1196L54.6533 21.2002H53.012L52.091 21.0794L50.9692 20.7967L49.9688 20.3939L49.1685 19.9508L48.6076 19.548L48.0868 19.1043L47.4465 18.4591L46.9256 17.7744L46.5648 17.1695L46.1647 16.3229L45.8446 15.3562L45.6445 14.3082L45.5644 13.22L45.6045 12.2929L45.7245 11.406L45.9246 10.6004L46.1653 9.915L46.4855 9.18928L46.9256 8.46423L47.2864 7.9802L47.7666 7.41627L48.3675 6.85168L49.0878 6.32803L49.7287 5.96485L50.4897 5.60232L51.33 5.32035L52.2511 5.11895L52.8913 5.03839L53.4522 4.99811ZM53.3321 9.22956L52.5318 9.39069L51.8909 9.67331L51.37 10.0761L51.0499 10.4393L50.7298 11.0032L50.5691 11.4463H57.1756L57.1363 11.2046L56.8148 10.5998L56.4954 10.197L56.0952 9.83377L55.6144 9.55247L54.8934 9.31012L54.3732 9.22956H53.3321ZM15.4947 0H20.1799V5.40092H27.2266L27.4267 5.4412V9.63303L27.3867 9.67265H20.1799L20.2192 15.1138L20.3399 15.759L20.58 16.2424L20.8601 16.525L21.1809 16.6861L21.5411 16.7667H22.3414L22.8222 16.6056L23.0623 16.4444L23.1824 16.4042L23.5032 15.759L23.6232 15.1138L23.6626 14.268L23.7032 14.2277H28.3077L28.3877 14.2673L28.3477 15.5576L28.2277 16.4444L28.0676 17.1292L27.8269 17.8146L27.5067 18.4591L27.2266 18.9029L26.9065 19.3057L26.3856 19.83L25.8254 20.2328L24.9844 20.6759L24.1434 20.9585L23.3825 21.1196L22.7422 21.2002H21.1009L20.1799 21.0794L19.4189 20.8773L18.778 20.6356L18.1377 20.3134L17.5769 19.9106L17.0967 19.4668L16.6965 19.0237L16.2964 18.4188L15.9756 17.7341L15.7355 17.0084L15.5754 16.2424L15.4954 15.5979L15.4554 14.9527V0.0402808L15.4947 0.000660449V0ZM82.6009 0H87.3254V5.40092H93.972L94.5722 5.4412V9.63303L94.4922 9.67265H87.3254L87.3654 15.2353L87.4855 15.7993L87.6856 16.2021L87.8856 16.4444L88.4465 16.7264L88.6466 16.766H89.4476L89.9678 16.6056L90.2879 16.3639L90.448 16.1618L90.6087 15.8396L90.7287 15.3562L90.8088 14.268L90.8488 14.2277H95.4532L95.4933 14.2673V15.3965L95.4132 16.1625L95.2532 16.9681L95.0124 17.6938L94.6523 18.4598L94.3321 18.9432L93.8913 19.4668L93.6112 19.7494L93.091 20.1522L92.4501 20.5154L91.6898 20.837L90.7688 21.0794L89.8477 21.2002H88.2058L87.3254 21.0794L86.4044 20.837L85.6434 20.5148L85.0832 20.1925L84.5623 19.7897L83.9621 19.1848L83.5613 18.6202L83.1611 17.8543L82.921 17.2098L82.7209 16.3229L82.6409 15.759L82.6009 15.1548V0ZM104.902 4.99811H105.743L106.664 5.07867L107.705 5.28007L108.786 5.64326L109.547 6.00579L110.188 6.40859L110.668 6.77178L111.229 7.25515L111.709 7.7788L112.19 8.42395L112.59 9.10872L112.91 9.79415L113.23 10.7615L113.351 11.2852V11.4866H108.586L108.266 10.8824L107.905 10.4386L107.545 10.1164L106.984 9.79415L106.344 9.55247L105.903 9.47125L105.222 9.43163L104.502 9.51219L103.861 9.71359L103.341 9.99556L102.94 10.3178L102.54 10.7615L102.22 11.3255L102.02 11.8498L101.899 12.3734L101.859 12.7762V13.4617L101.98 14.2277L102.18 14.8319L102.54 15.477L103.02 16.0007L103.621 16.4035L104.262 16.6458L104.822 16.7667H105.823L106.544 16.6056L107.144 16.3639L107.625 16.041L107.985 15.7187L108.386 15.1548L108.586 14.752H113.351L113.31 15.1138L113.03 16.1215L112.67 16.9681L112.27 17.6938L111.789 18.3383L111.429 18.7411L110.828 19.346L110.188 19.83L109.427 20.2724L108.746 20.596L107.785 20.9176L106.824 21.1196L106.143 21.2002H104.502L103.581 21.0794L102.58 20.837L101.819 20.555L100.979 20.1522L100.298 19.7091L99.7376 19.2654L99.2167 18.782L98.8566 18.3792L98.4558 17.8549L98.1356 17.3306L97.7355 16.5646L97.3753 15.5576L97.1746 14.6708L97.0546 13.6228V12.5755L97.1746 11.5678L97.3753 10.6816L97.6554 9.87537L98.0956 8.94826L98.4558 8.38433L98.8966 7.81974L99.2567 7.41693L99.6576 7.01412L100.338 6.48982L100.899 6.12663L101.579 5.7641L102.54 5.40158L103.541 5.15989L104.342 5.03905L104.902 4.99877V4.99811ZM6.08571 4.99811H6.9267L7.80771 5.07867L8.76875 5.28007L9.48904 5.52176L10.25 5.88494L10.8509 6.28775L11.2904 6.65094L11.6512 7.0128L12.012 7.49683L12.3321 8.06076L12.5722 8.62535L12.7323 9.26984L12.8123 9.99556L12.773 10.0358H8.24789L7.96778 9.47125L7.64765 9.18928L7.28685 9.02816L6.84667 8.9476H6.28645L5.84562 9.02816L5.44546 9.22956L5.24538 9.43097L5.08466 9.67331L5.0453 9.83443V10.3581L5.16534 10.5998L5.44546 10.8421L5.96566 11.0435L6.96672 11.2449L8.72874 11.5269L9.84984 11.8095L10.6108 12.0915L11.3711 12.4943L11.8913 12.8971L12.2521 13.2603L12.6129 13.7839L12.8924 14.3888L13.0531 15.0333L13.0924 15.2756V16.5653L12.9324 17.3313L12.6923 18.016L12.4122 18.5397L12.092 18.9834L11.7312 19.3862L11.4111 19.7091L10.7302 20.1925L10.13 20.5148L9.28896 20.837L8.2879 21.0794L7.36688 21.2002H5.68555L4.72451 21.0794L3.92419 20.8773L3.12322 20.5953L2.28222 20.1522L1.722 19.7494L1.20114 19.2654L0.76096 18.7015L0.40016 18.0966L0.160064 17.4514L0 16.8076V16.1215H4.60446L4.76453 16.6458L4.92459 16.8875L5.24538 17.0889L5.84562 17.25L6.60658 17.2903L7.36754 17.2098L7.88774 17.0084L8.12784 16.807L8.2879 16.4847V15.9201L8.12784 15.5979L7.88774 15.3965L7.40755 15.1951L6.68595 15.0333L4.68515 14.711L3.64342 14.4694L2.7224 14.1471L1.96144 13.7443L1.40122 13.3006L1.08109 12.9783L0.720288 12.454L0.440176 11.8498L0.280112 11.2449L0.20008 10.4393L0.240096 9.67331L0.360144 8.98788L0.600896 8.26283L0.96104 7.57739L1.3612 7.05308L1.80203 6.56972L2.32224 6.16691L2.84245 5.844L3.60341 5.48148L4.40373 5.23979L5.24538 5.07867L6.08571 4.99811ZM36.9964 4.99811H37.8768L38.7978 5.07867L39.6788 5.23979L40.4791 5.48148L41.2007 5.80372L41.841 6.20653L42.2812 6.56972L42.642 6.89196L43.0021 7.33571L43.2822 7.73852L43.643 8.38367L43.9632 9.18928L44.2033 10.1567L44.3233 10.9623L44.3633 11.4866V12.1727L44.3233 12.2123H39.6788L39.5588 11.1247L39.3587 10.4796L39.1179 10.0768L38.7578 9.75453L38.3176 9.55313L37.9968 9.47191L37.3566 9.43229L36.7157 9.51285L36.3155 9.67397L35.9547 9.91566L35.6746 10.2379L35.4745 10.6816L35.3545 11.0845L35.2744 11.9713L35.2344 20.7974H30.5499V11.3255L30.67 10.3178L30.87 9.43097L31.0701 8.82676L31.511 7.89964L31.9111 7.33571L32.3513 6.8114L32.7515 6.44821L33.3123 6.04541L33.8732 5.72316L34.6735 5.40092L35.4345 5.19951L36.4356 5.03839L36.9964 4.99811ZM126.683 2.21676H127.364L128.365 2.29732L129.326 2.45844L130.247 2.70079L131.128 3.02303L132.009 3.42584L132.69 3.82865L133.33 4.2724L133.851 4.6752L134.331 5.11895L134.651 5.40092L135.132 5.92456L135.612 6.52944L136.052 7.17393L136.413 7.7788L136.853 8.66563L137.214 9.63303L137.454 10.5192L137.614 11.3658L137.694 12.0915V13.7839L137.574 14.711L137.374 15.6784L136.933 17.0084L136.413 18.0966L135.892 18.9432L135.532 19.4265L135.172 19.8703L134.731 20.3536L134.131 20.9585L133.57 21.4009L132.97 21.8447L132.169 22.3287L131.088 22.8524L129.887 23.2552L128.806 23.4975L127.885 23.6184H126.123L124.842 23.417L124.041 23.2149L123.08 22.8926L122.119 22.4496L121.399 22.0468L120.998 21.7641L119.997 21.9655L116.473 22.7315L116.073 22.8121L116.033 22.7315L116.714 20.837L117.354 19.064L117.675 18.1369L117.154 17.0486L116.834 16.1618L116.594 15.2756L116.433 14.3485L116.353 13.502V12.3332L116.473 11.2449L116.674 10.2372L117.114 8.90732L117.595 7.89964L117.955 7.25515L118.516 6.44887L118.956 5.92456L119.317 5.52176L119.877 4.95783L120.318 4.59464L120.838 4.19183L121.439 3.78903L122.159 3.38622L122.92 3.02303L123.801 2.70079L124.922 2.41816L125.682 2.29732L126.683 2.21676ZM126.163 3.70781L125.122 3.86959L124.201 4.11127L123.36 4.43352L122.6 4.79671L121.759 5.32035L121.198 5.76344L120.638 6.24747L120.238 6.65028L119.877 7.09337L119.557 7.49617L119.157 8.10104L118.796 8.7462L118.476 9.43097L118.115 10.5192L117.915 11.4463L117.835 12.0512L117.795 12.9783L117.835 13.7839L117.995 14.8722L118.275 15.8798L118.676 16.8875L119.076 17.6535L119.277 17.9758L119.157 18.3786L118.516 20.1522L118.275 20.837L119.277 20.6356L121.118 20.2328H121.359L121.919 20.6356L122.52 20.9988L123.2 21.3613L124.041 21.6836L124.842 21.9252L125.682 22.087L126.443 22.1676H127.604L128.646 22.0468L129.647 21.8044L130.448 21.5224L131.168 21.2002L131.769 20.8773L132.489 20.3939L133.05 19.9508L133.65 19.3862L134.131 18.8626L134.531 18.3383L134.931 17.7341L135.172 17.3313L135.532 16.5653L135.892 15.5576L136.092 14.752L136.213 13.986L136.253 13.4617V12.3734L136.173 11.6074L135.972 10.5998L135.772 9.915L135.412 9.02816L134.972 8.1816L134.571 7.57739L134.171 7.05308L133.69 6.52944L133.13 5.96551L132.569 5.52176L132.049 5.15857L131.448 4.79604L130.528 4.35362L129.447 3.99043L128.766 3.82931L127.845 3.70781H126.163Z"
+                            fill="white" />
+                    </svg>
+
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-12">
+                    <a href="index.html#o-nas" class="nav-link">O nas</a>
+
+                    <div class="nav-dropdown group relative">
+                        <span class="nav-link-active">Zainspiruj się</span>
+                        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block">
+                            <div class="bg-dark-800 border border-dark-700 rounded-lg py-2 min-w-[200px] shadow-xl">
+                                <a href="#"
+                                    class="block px-4 py-2 text-body text-white hover:text-yellow-500 hover:bg-dark-700">Portfolio</a>
+                                <a href="case-studies.html"
+                                    class="block px-4 py-2 text-body text-white hover:text-yellow-500 hover:bg-dark-700">Case
+                                    studies</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-body text-yellow-500 hover:bg-dark-700">Blog</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="index.html#brief" class="nav-link">Brief</a>
+                    <a href="index.html#instars" class="nav-link">Instars</a>
+                    <a href="index.html#kontakt" class="nav-link">Kontakt</a>
+                </nav>
+            </div>
+
+            <!-- Right side -->
+            <div class="flex items-center">
+                <a href="index.html#brief" class="btn-cta hidden lg:inline-flex">
+                    <span>Przejdź do briefu</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+
+                <button class="mobile-menu-btn lg:hidden" id="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="lg:hidden hidden bg-dark-800 border-t border-dark-700" id="mobile-menu">
+            <nav class="px-4 py-6 flex flex-col gap-4">
+                <a href="index.html#o-nas" class="nav-link text-body-lg py-2">O nas</a>
+                <a href="case-studies.html" class="nav-link text-body-lg py-2">Case studies</a>
+                <a href="#" class="nav-link-active text-body-lg py-2">Blog</a>
+                <a href="index.html#brief" class="nav-link text-body-lg py-2">Brief</a>
+                <a href="index.html#instars" class="nav-link text-body-lg py-2">Instars</a>
+                <a href="index.html#kontakt" class="nav-link text-body-lg py-2">Kontakt</a>
+                <div class="pt-4">
+                    <a href="index.html#brief" class="btn-cta w-full justify-center">
+                        <span>Przejdź do briefu</span>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================
+       FIXED SIDEBAR - Social Media (Desktop only)
+       ============================================ -->
+    <aside
+        class="fixed left-0 top-0 bottom-0 w-[60px] bg-dark-950 z-sidebar hidden lg:flex flex-col justify-end items-center pb-16">
+        <div class="flex flex-col items-center gap-[60px]">
+            <a href="https://behance.net" target="_blank" rel="noopener" class="sidebar-social-link">
+                Behance
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="sidebar-social-link">
+                Linkedin
+            </a>
+            <div class="w-px h-[60px] bg-slate-400/20"></div>
+        </div>
+    </aside>
+
+    <!-- ============================================
+       MAIN CONTENT
+       ============================================ -->
+    <main class="lg:pl-[60px]">
+
+        <!-- ============================================
+           BLOG POST HERO — with background image fading to dark
+           ============================================ -->
+        <section class="cs-hero card-stack-section min-h-[75vh]">
+            <!-- Background image -->
+            <div class="cs-hero-bg" style="background-image: url('assets/img/casestudies.jpg');"></div>
+            <!-- Gradient overlay for fade effect -->
+            <div class="cs-hero-overlay"></div>
+
+            <div class="section-container relative z-10 h-full min-h-[75vh] flex items-center justify-center">
+                <div class="flex flex-col items-center text-center gap-6 max-w-4xl mx-auto">
+
+                    <!-- Subtitle with line -->
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-px bg-white"></div>
+                        <span class="text-white font-sans text-base uppercase tracking-wider">blog</span>
+                    </div>
+
+                    <h1 class="font-heading font-bold text-white" style="font-size: clamp(1.75rem, 4vw, 2.5rem); line-height: 1.3;">
+                        Where to find clients and how to develop cool products
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+           BLOG POST CONTENT
+           ============================================ -->
+        <section class="cs-content flex flex-col justify-start pt-16 lg:pt-24 pb-16">
+            <div class="section-container">
+                <div class="max-w-[1141px] mx-auto">
+
+                    <!-- Tags + Share row -->
+                    <div class="flex flex-wrap items-center justify-between gap-6 mb-12">
+                        <!-- Tags -->
+                        <div class="flex flex-wrap items-center gap-2.5">
+                            <span class="px-4 py-1 bg-dark-800 text-white font-sans text-base">Portfolio</span>
+                            <span class="px-4 py-1 bg-dark-800 text-white font-sans text-base">Business</span>
+                            <span class="px-4 py-1 bg-dark-800 text-white font-sans text-base">Creative</span>
+                            <span class="px-4 py-1 bg-dark-800 text-white font-sans text-base">Web</span>
+                        </div>
+                        <!-- Share -->
+                        <button class="flex items-center gap-2 text-white font-sans text-base uppercase tracking-wider hover:text-pink-500 transition-colors">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/>
+                            </svg>
+                            <span>Share</span>
+                        </button>
+                    </div>
+
+                    <!-- Article content -->
+                    <article class="blog-post-content">
+
+                        <!-- Intro text -->
+                        <p class="text-white text-xl font-normal leading-8 tracking-wide mb-8">
+                            Mobile app development is the act or process by which a mobile app is developed for mobile devices, such as personal digital assistants, enterprise digital assistants or mobile phones. These applications can be pre-installed on phones during manufacturing platforms, or delivered as web applications using server-side or client-side processing (e.g., JavaScript) to provide an "application-like" experience within a <span class="text-pink-500">Web browser</span>. Application software developers also must consider a long array of screen sizes, hardware specifications. Mobile app development is the act or process by which a mobile app is developed for mobile devices, such as personal digital assistants, enterprise digital assistants or mobile phones. These applications can be pre-installed on phones during manufacturing platforms, or delivered as web applications using server-side or client-side processing (e.g., JavaScript) to provide an "application-like" experience within a Web browser.
+                        </p>
+
+                        <!-- Quote block -->
+                        <blockquote class="bg-dark-800 p-8 lg:p-12 my-12 relative">
+                            <div class="absolute top-8 right-8 lg:top-12 lg:right-12 opacity-20">
+                                <svg class="w-20 h-20 text-pink-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                </svg>
+                            </div>
+                            <p class="text-white text-2xl lg:text-3xl font-medium leading-relaxed mb-8 max-w-4xl">
+                                Mobile app development is the act or process by which a mobile app is developed for mobile devices, such as personal digital assistants, enterprise digital assistants.
+                            </p>
+                            <footer>
+                                <cite class="not-italic">
+                                    <span class="block text-white text-xl font-heading capitalize">Marina Luidance</span>
+                                    <span class="block text-slate-400 text-base">Project Coordinator</span>
+                                </cite>
+                            </footer>
+                        </blockquote>
+
+                        <!-- More text -->
+                        <p class="text-white text-xl font-normal leading-8 mb-8">
+                            These applications can be pre-installed on phones during manufacturing platforms, or delivered as web applications using server-side or client-side processing (e.g., JavaScript) to provide an "application-like" experience within a Web browser. Application software developers also must consider a long array of screen sizes, hardware specifications.
+                        </p>
+
+                        <p class="text-white text-xl font-normal leading-8 mb-8">
+                            These applications can be pre-installed on phones during manufacturing platforms, or delivered as web applications using server-side or client-side processing (e.g., JavaScript) to provide an "application-like" experience within a Web browser. Application software developers also must consider a long array of screen sizes, hardware specifications. These applications can be pre-installed on phones during manufacturing platforms, or delivered as web applications using server-side or client-side processing (e.g., JavaScript) to provide an "application-like" experience within a Web browser. Application software developers also must consider a long array of screen sizes, hardware specifications.
+                        </p>
+
+                        <!-- Large heading -->
+                        <h2 class="text-white text-3xl lg:text-4xl font-heading font-normal leading-tight mb-8 mt-12">
+                            Mobile app development is the act or process by which a mobile app is developed for mobile devices, such as personal digital assistants, enterprise digital assistants or mobile phones. Developed for mobile devices, such as personal digital assistants, enterprise digital assistants or mobile phones.
+                        </h2>
+
+                        <!-- Image placeholder -->
+                        <div class="w-full h-[463px] bg-dark-800 my-12 flex items-center justify-center overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop" alt="Blog post image" class="w-full h-full object-cover">
+                        </div>
+
+                    </article>
+
+                    <!-- Navigation between posts -->
+                    <nav class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-8 pt-12 mt-12 border-t border-dark-700">
+                        <!-- Prev post -->
+                        <a href="#" class="group flex flex-col gap-2">
+                            <div class="flex items-center gap-4">
+                                <span class="text-white font-sans text-base uppercase tracking-wide">prev post</span>
+                                <div class="w-24 h-px bg-white"></div>
+                            </div>
+                            <span class="text-white text-xl font-heading font-semibold capitalize group-hover:text-pink-500 transition-colors">
+                                Site Development for Claros
+                            </span>
+                        </a>
+
+                        <!-- Next post -->
+                        <a href="#" class="group flex flex-col gap-2 text-right sm:items-end">
+                            <div class="flex items-center gap-4">
+                                <div class="w-24 h-px bg-pink-500"></div>
+                                <span class="text-pink-500 font-sans text-base uppercase tracking-wide">Next post</span>
+                            </div>
+                            <span class="text-pink-500 text-xl font-heading font-semibold capitalize group-hover:text-white transition-colors">
+                                SEO Optimization for Marvelius
+                            </span>
+                        </a>
+                    </nav>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+           FOOTER
+           ============================================ -->
+        <footer class="footer cs-footer">
+
+            <!-- Watermark — JS scales font-size to fill height -->
+            <div class="footer-watermark" id="footer-watermark">#WEHAVEINFLUENCE</div>
+
+            <div class="footer-container">
+                <div class="flex flex-col gap-16">
+
+                    <!-- Logo -->
+                    <div>
+                        <img src="assets/img/logo-white.svg" alt="Streetcom Group" class="h-24 w-auto">
+                    </div>
+
+                    <!-- 4 columns: Klienci, Media, Influencerzy, Kariera -->
+                    <div class="flex flex-col gap-16">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20">
+
+                            <!-- Klienci -->
+                            <div class="flex flex-col gap-8">
+                                <h3 class="footer-col-title">Klienci</h3>
+                                <div class="flex flex-col gap-1">
+                                    <span class="footer-col-text">+48 600 890 872</span>
+                                    <a href="mailto:sales@streetcom.pl" class="footer-col-link">sales@streetcom.pl</a>
+                                </div>
+                            </div>
+
+                            <!-- Media -->
+                            <div class="flex flex-col gap-8">
+                                <h3 class="footer-col-title">Media</h3>
+                                <div class="flex flex-col gap-1">
+                                    <a href="mailto:pr@streetcom.pl" class="footer-col-link">pr@streetcom.pl</a>
+                                </div>
+                            </div>
+
+                            <!-- Influencerzy -->
+                            <div class="flex flex-col gap-8">
+                                <h3 class="footer-col-title">Influencerzy</h3>
+                                <div class="flex flex-col gap-1">
+                                    <span class="footer-col-text">+48 532 466 800</span>
+                                    <a href="mailto:influ@streetcom.pl" class="footer-col-link">influ@streetcom.pl</a>
+                                </div>
+                            </div>
+
+                            <!-- Kariera -->
+                            <div class="flex flex-col gap-8">
+                                <h3 class="footer-col-title">Kariera</h3>
+                                <div class="flex flex-col gap-1">
+                                    <a href="mailto:hr@streetcom.pl" class="footer-col-link">hr@streetcom.pl</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Bottom row: Address + Links -->
+                        <div class="flex flex-col sm:flex-row gap-10 lg:gap-20">
+
+                            <!-- Address -->
+                            <div class="flex flex-col gap-1 w-60">
+                                <span class="footer-col-text">ul. Foksal 16</span>
+                                <span class="footer-col-text">00-372 Warszawa</span>
+                                <a href="tel:+48795487674" class="footer-col-link">tel: +48 795 487 674</a>
+                                <a href="mailto:office@streetcom.pl" class="footer-col-link">mail:
+                                    office@streetcom.pl</a>
+                            </div>
+
+                            <!-- Links -->
+                            <div class="flex flex-col gap-3">
+                                <span class="footer-col-text font-sans uppercase tracking-wider">LINKI</span>
+                                <a href="#" class="footer-col-text hover:text-yellow-500 transition-colors">Polityka
+                                    Prywatności</a>
+                                <a href="#" class="footer-col-text hover:text-yellow-500 transition-colors">Regulamin
+                                    Serwisu</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- ============================================
+       SCRIPTS
+       ============================================ -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+
+            const spans = mobileMenuBtn.querySelectorAll('span');
+            if (mobileMenu.classList.contains('hidden')) {
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = '';
+            } else {
+                spans[0].style.transform = 'translateY(6px) rotate(45deg)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'translateY(-6px) rotate(-45deg)';
+            }
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const spans = mobileMenuBtn.querySelectorAll('span');
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = '';
+            });
+        });
+
+        // ============================================
+        // FOOTER WATERMARK SCALING
+        // ============================================
+        function scaleFooterWatermark() {
+            const watermark = document.getElementById('footer-watermark');
+            if (!watermark) return;
+
+            const footer = watermark.closest('.footer');
+            if (!footer) return;
+
+            const footerHeight = footer.offsetHeight;
+            const targetHeight = footerHeight * 0.8;
+
+            // Reset font size first
+            watermark.style.fontSize = '10px';
+
+            // Binary search for the right font size
+            let low = 10;
+            let high = 1000;
+            let bestSize = 10;
+
+            while (low <= high) {
+                const mid = Math.floor((low + high) / 2);
+                watermark.style.fontSize = mid + 'px';
+
+                if (watermark.offsetHeight <= targetHeight) {
+                    bestSize = mid;
+                    low = mid + 1;
+                } else {
+                    high = mid - 1;
+                }
+            }
+
+            watermark.style.fontSize = bestSize + 'px';
+        }
+
+        // Initial call
+        scaleFooterWatermark();
+
+        // Resize handler
+        window.addEventListener('resize', scaleFooterWatermark);
+    </script>
+
+</body>
+
+</html>
