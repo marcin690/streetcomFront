@@ -1185,28 +1185,53 @@
 }
 
 .brief-modal-container {
-  @apply absolute inset-0 flex items-center justify-center p-4 overflow-y-auto;
+  @apply absolute inset-0 flex items-start sm:items-center justify-center p-2 sm:p-4 overflow-y-auto;
+  padding-top: 60px;
+}
+
+@media (min-width: 640px) {
+  .brief-modal-container {
+    padding-top: 1rem;
+  }
 }
 
 /* Modal content with gradient border */
 .brief-modal-content {
-  @apply relative w-full max-w-3xl rounded-2xl overflow-hidden;
-  padding: 3px; /* border width */
+  @apply relative w-full max-w-3xl rounded-xl sm:rounded-2xl;
+  padding: 2px;
   background: linear-gradient(246deg, #FACC15 0%, #C026D3 68%, #EC4899 100%);
+  margin: 0 auto;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+
+@media (min-width: 640px) {
+  .brief-modal-content {
+    padding: 3px;
+    max-height: none;
+    overflow: visible;
+  }
 }
 
 .brief-modal-content::before {
   content: '';
-  @apply absolute inset-[3px] rounded-2xl;
+  @apply absolute rounded-xl sm:rounded-2xl;
+  inset: 2px;
   background: #111114;
   z-index: 0;
 }
 
-/* Background decoration - woman image */
+@media (min-width: 640px) {
+  .brief-modal-content::before {
+    inset: 3px;
+  }
+}
+
+/* Background decoration - woman image - hidden on mobile */
 .brief-modal-bg {
-  @apply absolute bottom-0 right-0 pointer-events-none;
-  width: 320px;
-  height: 400px;
+  @apply absolute bottom-0 right-0 pointer-events-none hidden sm:block;
+  width: 280px;
+  height: 350px;
   background-image: url('../assets/img/brief.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -1217,19 +1242,43 @@
   mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
 }
 
+@media (min-width: 1024px) {
+  .brief-modal-bg {
+    width: 320px;
+    height: 400px;
+  }
+}
+
 /* Mini hero header */
 .brief-modal-hero {
-  @apply relative z-10 text-center py-6 px-8 -mx-8 -mt-8 mb-6;
+  @apply relative z-10 text-center;
   background: linear-gradient(180deg, rgba(192, 38, 211, 0.15) 0%, transparent 100%);
   border-bottom: 1px solid rgba(255,255,255,0.1);
-  margin: -3px -3px 24px -3px;
-  padding: 24px 32px;
-  border-radius: 16px 16px 0 0;
+  margin: -2px -2px 16px -2px;
+  padding: 16px 16px;
+  border-radius: 10px 10px 0 0;
+}
+
+@media (min-width: 640px) {
+  .brief-modal-hero {
+    margin: -3px -3px 24px -3px;
+    padding: 24px 32px;
+    border-radius: 14px 14px 0 0;
+  }
 }
 
 /* Close button - yellow style */
 .brief-modal-close {
-  @apply absolute top-6 right-6 z-20 inline-flex items-center gap-2 px-4 py-2 text-yellow-500 font-heading font-semibold text-sm rounded-full border border-yellow-500 bg-transparent transition-all duration-200;
+  @apply absolute z-20 inline-flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 text-yellow-500 font-heading font-semibold text-xs sm:text-sm rounded-full border border-yellow-500 bg-dark-900/80 sm:bg-transparent transition-all duration-200;
+  top: 12px;
+  right: 12px;
+}
+
+@media (min-width: 640px) {
+  .brief-modal-close {
+    top: 24px;
+    right: 24px;
+  }
 }
 
 .brief-modal-close:hover {
@@ -1238,7 +1287,7 @@
 
 /* Form wrapper */
 .brief-popup-form {
-  @apply relative z-10 px-6 pb-6;
+  @apply relative z-10 px-4 pb-4 sm:px-6 sm:pb-6;
 }
 
 /* Popup form inputs - compact */
